@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Phone, MessageSquare } from 'lucide-vue-next'
-// Page sections are automatically imported by Nuxt 4
+const { locale } = useI18n()
 </script>
 
 <template>
@@ -30,7 +30,7 @@ import { Phone, MessageSquare } from 'lucide-vue-next'
               <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
                 <Phone class="w-7 h-7" />
               </div>
-              <div class="text-right">
+              <div :class="[locale === 'ar' ? 'text-right' : 'text-left']">
                 <p class="text-sm text-primary-300 uppercase tracking-widest font-bold">{{ $t('nav.contact') }}</p>
                 <p class="text-2xl md:text-3xl font-black tracking-tighter" dir="ltr">+20 111 710 8646</p>
               </div>

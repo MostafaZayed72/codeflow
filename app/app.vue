@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { locale } = useI18n()
+const { t, locale } = useI18n()
 const head = useLocaleHead({
   addDirAttribute: true,
   identifierAttribute: 'id',
@@ -7,11 +7,28 @@ const head = useLocaleHead({
 })
 
 useHead({
-  titleTemplate: (title) => title ? `${title} | CodeFlow Agency` : 'CodeFlow | Digital Transformation Agency',
-  meta: [
-    { name: 'description', content: 'High-performance web development agency specializing in Nuxt, Vue, and professional UI/UX design for the GCC market.' }
+  titleTemplate: (title) => title ? `${title} | CodeFlow` : t('seo.title'),
+  link: [
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
   ]
 })
+
+useSeoMeta({
+  title: () => t('seo.title'),
+  ogTitle: () => t('seo.ogTitle'),
+  description: () => t('seo.description'),
+  ogDescription: () => t('seo.ogDescription'),
+  ogImage: 'https://codeflowweb.vercel.app/logo_v3.png',
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogType: 'website',
+  ogUrl: 'https://codeflowweb.vercel.app/',
+  twitterCard: 'summary_large_image',
+  twitterTitle: () => t('seo.ogTitle'),
+  twitterDescription: () => t('seo.ogDescription'),
+  twitterImage: 'https://codeflowweb.vercel.app/logo_v3.png',
+})
+
 
 const initObserver = () => {
   const observer = new IntersectionObserver((entries) => {

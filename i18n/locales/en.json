@@ -114,6 +114,12 @@
       "solution": "Custom automation system integrating the site with WhatsApp and Google Calendar.",
       "impact": "Saved 20 hours per week and reduced booking errors by 95%."
     }
+  },
+  "seo": {
+    "title": "CodeFlow | Digital Transformation & High Performance Agency",
+    "description": "Premium web development agency specializing in high-performance digital experiences. Experts in Nuxt, Vue, and custom software for the global market.",
+    "ogTitle": "CodeFlow - Your Digital Success Partner",
+    "ogDescription": "Transforming your ideas into stunning digital realities with the highest quality standards."
   }
 }
 

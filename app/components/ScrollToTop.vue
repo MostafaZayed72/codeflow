@@ -24,7 +24,7 @@ const scrollToTop = () => {
       v-if="isVisible"
       @click="scrollToTop"
       class="fixed bottom-28 z-50 p-4 rounded-2xl bg-white dark:bg-slate-800 text-primary-600 dark:text-primary-400 shadow-2xl border border-slate-200 dark:border-slate-700 hover:scale-110 active:scale-95 transition-all duration-300 group"
-      :class="[locale === 'ar' ? 'left-8' : 'right-8']"
+      :class="[locale === 'ar' ? 'right-8' : 'left-8']"
       aria-label="Scroll to top"
     >
       <ChevronUp class="w-6 h-6 group-hover:-translate-y-1 transition-transform" />

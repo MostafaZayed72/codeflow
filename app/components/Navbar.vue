@@ -41,7 +41,12 @@ const closeMenu = () => {
     <div class="max-w-7xl mx-auto w-full flex items-center justify-between">
       <!-- Logo -->
       <NuxtLink to="/" class="relative h-20 w-40 overflow-hidden flex items-center z-[70]" @click="closeMenu">
-        <img src="/logo_v3.png" alt="CodeFlow Logo" class="absolute left-0 h-32 w-auto max-w-none" />
+        <img 
+          src="/logo_v3.png" 
+          alt="CodeFlow Logo" 
+          class="absolute h-32 w-auto max-w-none" 
+          :class="[locale === 'ar' ? 'right-0' : 'left-0']"
+        />
       </NuxtLink>
 
       <!-- Desktop Links -->
