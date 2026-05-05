@@ -1,0 +1,80 @@
+{
+  "nav": {
+    "services": "Services",
+    "work": "Portfolio",
+    "testimonials": "Testimonials",
+    "contact": "Contact Us",
+    "language": "Language",
+    "theme": "Theme"
+  },
+  "hero": {
+    "badge": "Next-Gen Web Agency",
+    "title": "Digital Transformation &",
+    "subtitle": "High Performance",
+    "description": "We build premium web experiences that drive results. Scalable, secure, and optimized for the modern web.",
+    "cta": "Contact Us"
+  },
+  "services": {
+    "title": "Our Specialized Services",
+    "wordpress": {
+      "title": "Professional WordPress",
+      "desc": "Fast, secure, and easy-to-manage WordPress websites tailored to your brand."
+    },
+    "custom": {
+      "title": "Custom Development",
+      "desc": "Bespoke software solutions built with cutting-edge tech to solve unique challenges."
+    },
+    "seo": {
+      "title": "SEO Optimization",
+      "desc": "Rank higher on search engines and drive organic growth with proven strategies."
+    },
+    "marketing": {
+      "title": "Digital Marketing",
+      "desc": "Creative ad campaigns to boost brand awareness and drive sales."
+    },
+    "apps": {
+      "title": "Mobile Apps",
+      "desc": "Building seamless and powerful iOS & Android applications for your users."
+    },
+    "maintenance": {
+      "title": "Support & Maintenance",
+      "desc": "Continuous technical support to ensure your site runs at peak performance."
+    }
+  },
+  "features": {
+    "speed": { "title": "Bazinga Speed", "desc": "Lightning-fast performance for modern web users." },
+    "security": { "title": "Ironclad Security", "desc": "Enterprise-grade security built into every line of code." },
+    "seo": { "title": "SEO Ready", "desc": "Optimized for search engines to drive organic growth." }
+  },
+  "process": {
+    "title": "Our Proven Process",
+    "step1": "Brief",
+    "step2": "Design",
+    "step3": "Develop",
+    "step4": "Launch"
+  },
+  "work": {
+    "title": "Our Featured Work",
+    "view_project": "View Project",
+    "project1": { "title": "SN&P", "category": "Cybersecurity", "desc": "Professional platform for cyber threat protection and exploit detection." },
+    "project2": { "title": "Square One", "category": "Real Estate", "desc": "Integrated digital identity for a major real estate development company." },
+    "project3": { "title": "Dam (دام)", "category": "Community Platform", "desc": "Interactive map for discovering community activities and events in Saudi Arabia." },
+    "project4": { "title": "Zabots", "category": "AI Automation", "desc": "Smart system for managing conversations and turning them into sales." },
+    "project5": { "title": "Kids Platform", "category": "Educational", "desc": "Educational content and interactive stories for children in a safe environment." },
+    "project6": { "title": "Khatwat (خطوات)", "category": "Language Learning", "desc": "Specialized program for teaching Arabic to non-native speakers." },
+    "project7": { "title": "Tqdr Plus", "category": "Loyalty Systems", "desc": "Smart system for managing customer points and loyalty for stores." }
+  },
+  "testimonials": {
+    "title": "Client Testimonials",
+    "client1": { "name": "Alex Johnson", "role": "Tech CEO", "text": "Extremely professional team, work exceeded expectations." },
+    "client2": { "name": "Sarah Miller", "role": "Entrepreneur", "text": "Timely delivery and perfect execution every time." },
+    "client3": { "name": "Michael Brown", "role": "Store Owner", "text": "They helped us double our sales with a modern store." },
+    "client4": { "name": "Emma Wilson", "role": "UI Designer", "text": "Great user experience and attention to detail." },
+    "client5": { "name": "Chris Evans", "role": "Investor", "text": "Best investment I made for my digital project." },
+    "client6": { "name": "Jessica Alba", "role": "Marketing Head", "text": "SEO improved significantly in record time." },
+    "client7": { "name": "David Gandy", "role": "Developer", "text": "Clean code and very high performance." },
+    "client8": { "name": "Sophia Loren", "role": "Writer", "text": "A fast and user-friendly website." },
+    "client9": { "name": "Tom Hardy", "role": "Project Manager", "text": "Continuous communication and excellent support." },
+    "client10": { "name": "Gal Gadot", "role": "Artist", "text": "World-class visual identity and design." }
+  }
+}
