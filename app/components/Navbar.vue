@@ -14,6 +14,7 @@ const navLinks = [
   { href: '#services', label: 'nav.services' },
   { href: '#work', label: 'nav.work' },
   { href: '#testimonials', label: 'nav.testimonials' },
+  { href: '#contact', label: 'nav.contact' },
 ]
 
 const toggleMenu = () => {
@@ -43,12 +44,12 @@ const closeMenu = () => {
       </NuxtLink>
 
       <!-- Desktop Links -->
-      <div class="hidden lg:flex items-center gap-10">
+      <div class="hidden lg:flex items-center gap-8">
         <a 
           v-for="link in navLinks" 
           :key="link.href"
           :href="link.href" 
-          class="text-lg font-bold hover:text-primary-600 transition-colors"
+          class="text-base font-bold hover:text-primary-600 transition-colors"
         >
           {{ t(link.label) }}
         </a>
@@ -74,15 +75,13 @@ const closeMenu = () => {
         <button 
           @click="toggleMenu"
           class="lg:hidden p-2.5 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-all z-[70]"
-          :class="[isMenuOpen ? 'bg-slate-100 dark:bg-slate-800' : '']"
         >
-          <Menu v-if="!isMenuOpen" class="w-7 h-7" />
-          <X v-else class="w-7 h-7" />
+          <Menu class="w-7 h-7" />
         </button>
       </div>
     </div>
 
-    <!-- Mobile Menu - Teleported to body for correct z-index stacking -->
+    <!-- Mobile Menu - Teleported to body -->
     <Teleport to="body">
       <!-- Mobile Menu Overlay -->
       <Transition name="fade">
@@ -97,10 +96,21 @@ const closeMenu = () => {
       <Transition :name="locale === 'ar' ? 'slide-rtl' : 'slide-ltr'">
         <div 
           v-if="isMenuOpen" 
-          class="fixed top-0 bottom-0 w-[85%] max-w-sm bg-white dark:bg-slate-950 z-[110] lg:hidden shadow-[0_0_50px_rgba(0,0,0,0.3)] p-8 pt-32 flex flex-col"
-          :class="[locale === 'ar' ? 'right-0' : 'left-0']"
+          class="fixed top-0 bottom-0 w-[85%] max-w-sm bg-white dark:bg-slate-950 z-[110] lg:hidden shadow-[0_0_50px_rgba(0,0,0,0.3)] flex flex-col"
+          :class="[locale === 'ar' ? 'right-0 text-right' : 'left-0 text-left']"
         >
-          <div class="flex flex-col gap-8 flex-grow">
+          <!-- Drawer Header with Close Button -->
+          <div class="flex items-center justify-between p-6 border-b border-slate-100 dark:border-slate-800">
+            <span class="text-xl font-black text-primary-600">CodeFlow</span>
+            <button 
+              @click="closeMenu"
+              class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300"
+            >
+              <X class="w-6 h-6" />
+            </button>
+          </div>
+
+          <div class="p-8 flex flex-col gap-6 flex-grow">
             <a 
               v-for="link in navLinks" 
               :key="link.href"
@@ -126,9 +136,9 @@ const closeMenu = () => {
           </div>
 
           <!-- Contact Info in Menu -->
-          <div class="mt-auto pt-8 border-t border-slate-100 dark:border-slate-800 space-y-6">
-            <div class="flex items-center gap-4">
-              <div class="w-12 h-12 rounded-2xl bg-primary-50 dark:bg-primary-900/30 flex items-center justify-center text-primary-600">
+          <div class="mt-auto p-8 border-t border-slate-100 dark:border-slate-800 space-y-6 bg-slate-50 dark:bg-slate-900/50">
+            <div class="flex items-center gap-4" :class="[locale === 'ar' ? 'flex-row-reverse text-right' : 'flex-row text-left']">
+              <div class="w-12 h-12 rounded-full bg-primary-50 dark:bg-primary-900/30 flex items-center justify-center text-primary-600">
                 <Phone class="w-6 h-6" />
               </div>
               <div>

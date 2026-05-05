@@ -39,6 +39,18 @@
     "maintenance": {
       "title": "Support & Maintenance",
       "desc": "Continuous technical support to ensure your site runs at peak performance."
+    },
+    "clinics": {
+      "title": "Clinic Systems",
+      "desc": "Integrated systems for managing clinics, medical centers, bookings, and patient records."
+    },
+    "erp": {
+      "title": "ERP Systems",
+      "desc": "Software solutions for resource management, inventory, accounting, and HR in one platform."
+    },
+    "automation": {
+      "title": "Automation & n8n",
+      "desc": "Connecting apps and automating repetitive tasks using n8n to boost productivity."
     }
   },
   "features": {
