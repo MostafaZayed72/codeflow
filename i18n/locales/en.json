@@ -1,6 +1,7 @@
 {
   "nav": {
     "services": "Services",
+    "solutions": "Solutions",
     "work": "Portfolio",
     "testimonials": "Testimonials",
     "contact": "Contact Us",
@@ -88,5 +89,31 @@
     "client8": { "name": "Sophia Loren", "role": "Writer", "text": "A fast and user-friendly website." },
     "client9": { "name": "Tom Hardy", "role": "Project Manager", "text": "Continuous communication and excellent support." },
     "client10": { "name": "Gal Gadot", "role": "Artist", "text": "World-class visual identity and design." }
+  },
+  "solutions": {
+    "title": "How We Solve Problems",
+    "subtitle": "We don't just showcase skills; we transform challenges into measurable success",
+    "problem_label": "Problem",
+    "solution_label": "Solution",
+    "impact_label": "Impact",
+    "case1": {
+      "title": "Turning Sluggishness into Sales",
+      "problem": "An e-commerce store with a 70% bounce rate due to slow loading speeds.",
+      "solution": "Rebuilt using modern web tech (Nuxt 3) and high-level performance tuning.",
+      "impact": "45% increase in sales and load time reduced to under 1 second."
+    },
+    "case2": {
+      "title": "Dominating Search Results",
+      "problem": "A real estate company failing to rank on the first page for key terms.",
+      "solution": "Advanced technical SEO audit and a strategic content architecture.",
+      "impact": "Ranked #1 for 15 core keywords and 300% growth in organic traffic."
+    },
+    "case3": {
+      "title": "Automating Complex Workflows",
+      "problem": "Manual booking management was wasting 4 hours of staff time daily.",
+      "solution": "Custom automation system integrating the site with WhatsApp and Google Calendar.",
+      "impact": "Saved 20 hours per week and reduced booking errors by 95%."
+    }
   }
 }
+

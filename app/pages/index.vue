@@ -8,6 +8,7 @@ import { Phone, MessageSquare } from 'lucide-vue-next'
     <Hero />
     <TechStack />
     <Services />
+    <Solutions />
     <Work />
     <Testimonials />
     

@@ -12,6 +12,7 @@ if (import.meta.client) {
 
 const navLinks = [
   { href: '#services', label: 'nav.services' },
+  { href: '#solutions', label: 'nav.solutions' },
   { href: '#work', label: 'nav.work' },
   { href: '#testimonials', label: 'nav.testimonials' },
   { href: '#contact', label: 'nav.contact' },
