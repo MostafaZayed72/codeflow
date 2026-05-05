@@ -99,7 +99,7 @@
     "case1": {
       "title": "Turning Sluggishness into Sales",
       "problem": "An e-commerce store with a 70% bounce rate due to slow loading speeds.",
-      "solution": "Rebuilt using modern web tech (Nuxt 3) and high-level performance tuning.",
+      "solution": "Rebuilt using modern web tech (Nuxt 4) and high-level performance tuning.",
       "impact": "45% increase in sales and load time reduced to under 1 second."
     },
     "case2": {
