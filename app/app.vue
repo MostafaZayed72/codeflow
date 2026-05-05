@@ -13,7 +13,7 @@ useHead({
   ]
 })
 
-onMounted(() => {
+const initObserver = () => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -23,6 +23,17 @@ onMounted(() => {
   }, { threshold: 0.1 })
 
   document.querySelectorAll('.fade-in-on-scroll').forEach(el => observer.observe(el))
+}
+
+onMounted(() => {
+  initObserver()
+})
+
+// Re-initialize observer when locale changes to handle re-rendered elements
+watch(locale, () => {
+  setTimeout(() => {
+    initObserver()
+  }, 500)
 })
 </script>
 
@@ -30,15 +41,12 @@ onMounted(() => {
   <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
     <Body>
       <Navbar />
-      <main>
+      <main class="p-0 m-0">
         <NuxtPage />
       </main>
       <WhatsAppFAB />
+      <ScrollToTop />
       
-      <!-- Simple Footer -->
-      <footer class="py-12 border-t border-slate-200 dark:border-slate-800 text-center text-slate-500 text-sm">
-        <p>© {{ new Date().getFullYear() }} CodeFlow Agency. All rights reserved.</p>
-      </footer>
     </Body>
   </Html>
 </template>
