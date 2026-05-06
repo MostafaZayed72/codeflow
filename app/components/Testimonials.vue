@@ -4,11 +4,13 @@ const { t, locale } = useI18n()
 
 const testimonialList = computed(() => {
   const items = []
-  for (let i = 1; i <= 10; i++) {
+  for (let i = 1; i <= 12; i++) {
+    const key = `testimonials.client${i}`
     items.push({
-      name: t(`testimonials.client${i}.name`),
-      role: t(`testimonials.client${i}.role`),
-      text: t(`testimonials.client${i}.text`)
+      name: t(`${key}.name`),
+      role: t(`${key}.role`),
+      text: t(`${key}.text`),
+      image: t(`${key}.image`)
     })
   }
   return items
@@ -37,7 +39,7 @@ onMounted(() => {
   
   const timer = setInterval(() => {
     next()
-  }, 3000)
+  }, 5000)
 
   onUnmounted(() => {
     clearInterval(timer)
@@ -69,16 +71,21 @@ onMounted(() => {
               class="flex-none px-4"
               :style="{ width: `${100 / itemsToShow}%` }"
             >
-              <div class="glass-card p-10 relative group border-slate-200/50 dark:border-slate-800/50 h-full flex flex-col justify-between hover:border-primary-500/50 transition-colors">
+              <div class="glass-card p-10 relative group border-slate-200/50 dark:border-slate-800/50 h-full flex flex-col justify-between hover:border-primary-500/50 transition-all duration-500 hover:-translate-y-2">
                 <Quote class="absolute top-8 right-8 w-12 h-12 text-primary-500/10" />
                 
                 <p class="text-xl text-slate-600 dark:text-slate-300 italic mb-8 leading-relaxed relative z-10">
                   "{{ item.text }}"
                 </p>
                 
-                <div class="border-t border-slate-100 dark:border-slate-800 pt-6">
-                  <h4 class="font-bold text-xl text-slate-900 dark:text-white">{{ item.name }}</h4>
-                  <p class="text-primary-600 dark:text-primary-400 font-medium">{{ item.role }}</p>
+                <div class="flex items-center gap-4 border-t border-slate-100 dark:border-slate-800 pt-6">
+                  <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-primary-500/20">
+                    <img :src="item.image" :alt="item.name" class="w-full h-full object-cover">
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-xl text-slate-900 dark:text-white">{{ item.name }}</h4>
+                    <p class="text-primary-600 dark:text-primary-400 font-medium text-sm leading-tight">{{ item.role }}</p>
+                  </div>
                 </div>
               </div>
             </div>

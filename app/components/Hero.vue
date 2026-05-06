@@ -64,12 +64,18 @@ const { t, locale } = useI18n()
           {{ t('hero.cta') }}
           <ArrowRight class="w-6 h-6 group-hover:translate-x-1 transition-transform" :class="[locale === 'ar' ? 'rotate-180 group-hover:-translate-x-1' : '']" />
         </a>
-        <a
-          href="#services"
-          class="btn-outline w-full sm:w-auto text-xl px-10 py-5 bg-white/20 dark:bg-transparent backdrop-blur-sm"
-        >
-          {{ t('services.title') }}
-        </a>
+        <div class="relative w-full sm:w-auto group">
+          <div class="absolute -inset-1 bg-gradient-to-r from-primary-600 to-gold rounded-2xl blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+          <a
+            href="#contact"
+            class="relative btn-outline w-full sm:w-auto text-xl px-10 py-5 bg-white dark:bg-slate-900/80 backdrop-blur-sm border-2 border-slate-200 dark:border-slate-800 hover:border-primary-500 flex items-center justify-center gap-2"
+          >
+            {{ t('hero.consultation') }}
+            <span class="absolute -top-3 -right-3 px-2 py-1 bg-emerald-500 text-white text-[10px] font-black rounded-lg animate-bounce uppercase tracking-tighter">
+              Free
+            </span>
+          </a>
+        </div>
       </div>
 
       <!-- Hero Features (Enhanced) -->

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Phone, MessageSquare } from 'lucide-vue-next'
-const { locale } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 </script>
 
@@ -19,46 +19,72 @@ const localePath = useLocalePath()
         <div class="absolute -top-24 -left-24 w-96 h-96 bg-white rounded-full blur-[100px]"></div>
       </div>
       
-      <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
-        <h2 class="text-4xl md:text-6xl font-black mb-8">{{ $t('nav.contact') }}</h2>
-        <p class="text-xl md:text-2xl text-primary-100 mb-12 max-w-2xl mx-auto">
-          {{ $t('hero.description') }}
-        </p>
+      <div class="max-w-7xl mx-auto px-4 relative z-10">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-6xl font-black mb-6">{{ t('nav.contact') }}</h2>
+          <p class="text-xl text-primary-100 max-w-2xl mx-auto">
+            {{ t('contact_form.subtitle') }}
+          </p>
+        </div>
         
-        <div class="flex flex-col items-center gap-8">
-          <div class="flex flex-col md:flex-row items-center gap-6 md:gap-12">
-            <div class="flex items-center gap-4 group">
-              <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                <Phone class="w-7 h-7" />
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <!-- Left: Contact Info & WhatsApp -->
+          <div class="space-y-12 order-2 lg:order-1">
+            <div class="flex flex-col items-center lg:items-start gap-8">
+              <div class="flex items-center gap-6 group">
+                <div class="w-20 h-20 rounded-3xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors shrink-0">
+                  <Phone class="w-10 h-10" />
+                </div>
+                <div :class="[locale === 'ar' ? 'text-right' : 'text-left']">
+                  <p class="text-sm text-primary-300 uppercase tracking-widest font-bold mb-1">{{ t('nav.contact') }}</p>
+                  <p class="text-3xl md:text-4xl font-black tracking-tighter" dir="ltr">+20 111 710 8646</p>
+                </div>
               </div>
-              <div :class="[locale === 'ar' ? 'text-right' : 'text-left']">
-                <p class="text-sm text-primary-300 uppercase tracking-widest font-bold">{{ $t('nav.contact') }}</p>
-                <p class="text-2xl md:text-3xl font-black tracking-tighter" dir="ltr">+20 111 710 8646</p>
+
+              <a
+                href="https://wa.me/201117108646"
+                target="_blank"
+                class="inline-flex items-center justify-center px-12 py-6 rounded-3xl bg-white text-primary-900 font-bold text-2xl hover:bg-gold hover:text-white transition-all duration-300 shadow-[0_20px_50px_rgba(255,255,255,0.1)] hover:-translate-y-2 group w-full lg:w-auto"
+              >
+                <MessageSquare class="w-8 h-8 mr-4 group-hover:rotate-12 transition-transform" />
+                {{ t('hero.cta') }}
+              </a>
+            </div>
+
+            <!-- Locations -->
+            <div class="pt-12 border-t border-white/10">
+              <h4 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                <span class="w-2 h-8 bg-gold rounded-full"></span>
+                {{ t('locations.title') }}
+              </h4>
+              <p class="text-primary-200 mb-8 leading-relaxed">
+                {{ t('locations.description') }}
+              </p>
+              <div class="flex flex-wrap gap-4">
+                <div v-for="loc in ['egypt', 'ksa', 'gcc']" :key="loc" class="px-6 py-3 rounded-2xl bg-white/5 border border-white/10 text-primary-100 font-bold">
+                  {{ t(`locations.${loc}`) }}
+                </div>
               </div>
             </div>
           </div>
 
-          <a
-            href="https://wa.me/201117108646"
-            target="_blank"
-            class="inline-flex items-center justify-center px-12 py-6 rounded-3xl bg-white text-primary-900 font-bold text-2xl hover:bg-gold hover:text-white transition-all duration-300 shadow-[0_20px_50px_rgba(255,255,255,0.1)] hover:-translate-y-2 group"
-          >
-            <MessageSquare class="w-8 h-8 mr-4 group-hover:rotate-12 transition-transform" />
-            {{ $t('hero.cta') }}
-          </a>
-
-          <!-- Footer Links & Copyright -->
-          <div class="mt-20 pt-10 border-t border-white/10 w-full flex flex-col md:flex-row items-center justify-between gap-6">
-            <p class="text-primary-200 text-sm">
-              {{ $t('privacy.copyright', { year: new Date().getFullYear() }) }}
-            </p>
-            <NuxtLink 
-              :to="localePath('/privacy')" 
-              class="text-primary-200 hover:text-white text-sm font-bold transition-colors underline underline-offset-4"
-            >
-              {{ $t('privacy.title') }}
-            </NuxtLink>
+          <!-- Right: Contact Form -->
+          <div class="order-1 lg:order-2">
+            <ContactForm />
           </div>
+        </div>
+
+        <!-- Footer Links & Copyright -->
+        <div class="mt-24 pt-10 border-t border-white/10 w-full flex flex-col md:flex-row items-center justify-between gap-6">
+          <p class="text-primary-200 text-sm">
+            {{ t('privacy.copyright', { year: new Date().getFullYear() }) }}
+          </p>
+          <NuxtLink 
+            :to="localePath('/privacy')" 
+            class="text-primary-200 hover:text-white text-sm font-bold transition-colors underline underline-offset-4"
+          >
+            {{ t('privacy.title') }}
+          </NuxtLink>
         </div>
       </div>
     </section>

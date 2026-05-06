@@ -12,8 +12,9 @@
     "badge": "Next-Gen Web Agency",
     "title": "Digital Transformation &",
     "subtitle": "High Performance",
-    "description": "We build premium web experiences that drive results. Scalable, secure, and optimized for the modern web.",
-    "cta": "Contact Us"
+    "description": "Get a completely free Demo version for your project and experience the difference before you start. Our team is ready to turn your idea into reality now.",
+    "cta": "Contact Us",
+    "consultation": "Request Free Demo"
   },
   "services": {
     "title": "Our Specialized Services",
@@ -78,17 +79,79 @@
     "project7": { "title": "Tqdr Plus", "category": "Loyalty Systems", "desc": "Smart system for managing customer points and loyalty for stores." }
   },
   "testimonials": {
-    "title": "Client Testimonials",
-    "client1": { "name": "Alex Johnson", "role": "Tech CEO", "text": "Extremely professional team, work exceeded expectations." },
-    "client2": { "name": "Sarah Miller", "role": "Entrepreneur", "text": "Timely delivery and perfect execution every time." },
-    "client3": { "name": "Michael Brown", "role": "Store Owner", "text": "They helped us double our sales with a modern store." },
-    "client4": { "name": "Emma Wilson", "role": "UI Designer", "text": "Great user experience and attention to detail." },
-    "client5": { "name": "Chris Evans", "role": "Investor", "text": "Best investment I made for my digital project." },
-    "client6": { "name": "Jessica Alba", "role": "Marketing Head", "text": "SEO improved significantly in record time." },
-    "client7": { "name": "David Gandy", "role": "Developer", "text": "Clean code and very high performance." },
-    "client8": { "name": "Sophia Loren", "role": "Writer", "text": "A fast and user-friendly website." },
-    "client9": { "name": "Tom Hardy", "role": "Project Manager", "text": "Continuous communication and excellent support." },
-    "client10": { "name": "Gal Gadot", "role": "Artist", "text": "World-class visual identity and design." }
+    "title": "Client Success Stories",
+    "client1": { 
+      "name": "Dr. Ibrahim Al-Suwaidi", 
+      "role": "CEO of Al-Qamma Holding", 
+      "text": "Working with CodeFlow was a turning point for our digital project. Their punctuality and code quality exceeded our expectations.",
+      "image": "/avatars/client1.png"
+    },
+    "client2": { 
+      "name": "Ms. Maryam Al-Rashed", 
+      "role": "Marketing Director at Noon", 
+      "text": "Thanks to their SEO expertise, we ranked on the first page in record time. A very professional team in solving technical problems.",
+      "image": "/avatars/client2.png"
+    },
+    "client3": { 
+      "name": "Eng. Omar Al-Otaibi", 
+      "role": "Founder of Tomorrow Solutions", 
+      "text": "The system they built made operations management seamless and saved our staff a lot of time and effort.",
+      "image": "/avatars/client3.png"
+    },
+    "client4": { 
+      "name": "Ms. Layla Al-Sharif", 
+      "role": "Operations Director at Emaar Properties", 
+      "text": "A creative and technically proficient team. They turned our complex idea into a reality with the highest international standards.",
+      "image": "/avatars/client4.png"
+    },
+    "client5": { 
+      "name": "Eng. Yasser Al-Qahtani", 
+      "role": "Entrepreneur - Founder of Wasl Co.", 
+      "text": "The best web development experience I've had. The site is very fast and user-friendly, which boosted our customers' trust and sales.",
+      "image": "/avatars/client5.png"
+    },
+    "client6": { 
+      "name": "Dr. Noura Al-Mansouri", 
+      "role": "Director of Ofuq Medical Center", 
+      "text": "Full commitment to deadlines and continuous technical support. The medical system they developed changed our booking management concept.",
+      "image": "/avatars/client6.png"
+    },
+    "client7": { 
+      "name": "Mr. Khalid Al-Harbi", 
+      "role": "General Manager at Binaa Capital", 
+      "text": "Professional execution and a deep understanding of the Saudi market requirements. The results were impressive by all measures.",
+      "image": "/avatars/client7.png"
+    },
+    "client8": { 
+      "name": "Eng. Faisal bin Zaid", 
+      "role": "Founder of Techno Platform", 
+      "text": "A young and ambitious team, they have an immense ability to understand startup needs and turn them into digital products.",
+      "image": "/avatars/client8.png"
+    },
+    "client9": { 
+      "name": "Ms. Sarah Al-Ghamdi", 
+      "role": "Creative Director at Fadaa Co.", 
+      "text": "The aesthetic touch in design combined with superior performance made our site stand out from all competitors.",
+      "image": "/avatars/client9.png"
+    },
+    "client10": { 
+      "name": "Dr. Abdulaziz Al-Fouzan", 
+      "role": "Chairman of Al-Fouzan Trading", 
+      "text": "Extensive experience in digital transformation. They helped us automate all our operations with unparalleled success.",
+      "image": "/avatars/client10.png"
+    },
+    "client11": { 
+      "name": "Ms. Munira Al-Saeed", 
+      "role": "HR Manager - Jisr Co.", 
+      "text": "The HR system they developed simplified many of our complex routine tasks significantly.",
+      "image": "/avatars/client11.png"
+    },
+    "client12": { 
+      "name": "Eng. Adel Al-Shammari", 
+      "role": "Founder of Wasalni App", 
+      "text": "Superior performance and precise execution. The CodeFlow team is the ideal technical partner for any successful project.",
+      "image": "/avatars/client12.png"
+    }
   },
   "solutions": {
     "title": "How We Solve Problems",
@@ -142,6 +205,23 @@
     },
     "back_home": "Back to Home",
     "copyright": "All Rights Reserved © {year} CodeFlow"
+  },
+  "contact_form": {
+    "title": "Send Us a Message",
+    "subtitle": "We'll get back to you within 24 hours",
+    "name": "Full Name",
+    "whatsapp": "WhatsApp Number",
+    "message": "How can we help you?",
+    "submit": "Send Message",
+    "success": "Your message was sent successfully! We'll contact you soon.",
+    "error": "Something went wrong, please try again."
+  },
+  "locations": {
+    "title": "Proudly Serving the Arab Market",
+    "description": "We specialize in meeting the needs of companies in the GCC and the Middle East.",
+    "egypt": "Egypt",
+    "ksa": "Saudi Arabia",
+    "gcc": "GCC Countries"
   }
 }
 
