@@ -6,7 +6,9 @@
     "testimonials": "Testimonials",
     "contact": "Contact Us",
     "language": "Language",
-    "theme": "Theme"
+    "theme": "Theme",
+    "light_mode": "Light",
+    "dark_mode": "Dark"
   },
   "hero": {
     "badge": "Next-Gen Web Agency",

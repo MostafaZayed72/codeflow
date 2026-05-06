@@ -6,7 +6,9 @@
     "testimonials": "آراء العملاء",
     "contact": "اتصل بنا",
     "language": "اللغة",
-    "theme": "المظهر"
+    "theme": "المظهر",
+    "light_mode": "نهاري",
+    "dark_mode": "ليلي"
   },
   "hero": {
     "badge": "وكالة ويب من الجيل القادم",

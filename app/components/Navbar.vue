@@ -102,11 +102,11 @@ const closeMenu = () => {
       <Transition :name="locale === 'ar' ? 'slide-rtl' : 'slide-ltr'">
         <div 
           v-if="isMenuOpen" 
-          class="fixed top-0 bottom-0 w-[85%] max-w-sm bg-white dark:bg-slate-950 z-[110] lg:hidden shadow-[0_0_50px_rgba(0,0,0,0.3)] flex flex-col"
+          class="fixed top-0 bottom-0 w-[85%] max-w-sm bg-white dark:bg-slate-950 z-[110] lg:hidden shadow-[0_0_50px_rgba(0,0,0,0.3)] flex flex-col overflow-y-auto"
           :class="[locale === 'ar' ? 'right-0 text-right' : 'left-0 text-left']"
         >
           <!-- Drawer Header with Close Button -->
-          <div class="flex items-center justify-between p-6 border-b border-slate-100 dark:border-slate-800">
+          <div class="flex items-center justify-between p-6 border-b border-slate-100 dark:border-slate-800 shrink-0">
             <span class="text-xl font-black text-primary-600">CodeFlow</span>
             <button 
               @click="closeMenu"
@@ -116,7 +116,7 @@ const closeMenu = () => {
             </button>
           </div>
 
-          <div class="p-8 flex flex-col gap-6 flex-grow">
+          <div class="p-8 flex flex-col gap-6">
             <a 
               v-for="link in navLinks" 
               :key="link.href"
@@ -129,14 +129,14 @@ const closeMenu = () => {
             
             <div class="h-px bg-slate-100 dark:bg-slate-800 my-4"></div>
             
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-2 gap-4 shrink-0">
               <div class="flex flex-col gap-2">
-                <span class="text-xs font-bold uppercase tracking-wider text-slate-400">{{ t('nav.language') }}</span>
-                <LangSwitcher class="!w-full" />
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-400 px-1 text-center">{{ t('nav.language') }}</span>
+                <LangSwitcher />
               </div>
               <div class="flex flex-col gap-2">
-                <span class="text-xs font-bold uppercase tracking-wider text-slate-400">{{ t('nav.theme') }}</span>
-                <ThemeToggle class="!w-full justify-center" />
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-400 px-1 text-center">{{ t('nav.theme') }}</span>
+                <ThemeToggle show-text />
               </div>
             </div>
           </div>
