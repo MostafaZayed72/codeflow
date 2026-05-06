@@ -76,7 +76,21 @@
     "project4": { "title": "Zabots", "category": "AI Automation", "desc": "Smart system for managing conversations and turning them into sales." },
     "project5": { "title": "Kids Platform", "category": "Educational", "desc": "Educational content and interactive stories for children in a safe environment." },
     "project6": { "title": "Khatwat (خطوات)", "category": "Language Learning", "desc": "Specialized program for teaching Arabic to non-native speakers." },
-    "project7": { "title": "Tqdr Plus", "category": "Loyalty Systems", "desc": "Smart system for managing customer points and loyalty for stores." }
+    "project7": {
+      "title": "Tqdr System",
+      "category": "Installment System",
+      "desc": "An integrated system for installment services and products with an advanced dashboard."
+    },
+    "project8": {
+      "title": "Mostafa Zayed Portfolio",
+      "category": "Personal Website",
+      "desc": "Design and development of a professional portfolio reflecting visual identity and technical skills."
+    },
+    "project9": {
+      "title": "Happy Paws",
+      "category": "Pet Store",
+      "desc": "An integrated platform for pet services and products with a modern and attractive design."
+    }
   },
   "testimonials": {
     "title": "Client Success Stories",

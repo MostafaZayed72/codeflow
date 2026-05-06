@@ -58,6 +58,22 @@ const projects = computed(() => [
     desc: t('work.project7.desc'),
     image: '/projects/tqdr.png',
     link: 'https://tqdr.vercel.app/'
+  },
+  {
+    id: 8,
+    title: t('work.project8.title'),
+    category: t('work.project8.category'),
+    desc: t('work.project8.desc'),
+    image: '/projects/mostafa_portfolio.png',
+    link: 'https://mostafa-zayed.vercel.app/'
+  },
+  {
+    id: 9,
+    title: t('work.project9.title'),
+    category: t('work.project9.category'),
+    desc: t('work.project9.desc'),
+    image: '/projects/happy_paws.png',
+    link: 'https://happy-paws-sepia.vercel.app/'
   }
 ])
 </script>

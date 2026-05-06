@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Send, User, Phone, MessageSquare, CheckCircle2, AlertCircle } from 'lucide-vue-next'
-const { t } = useI18n()
+import { Send, User, Phone as PhoneIcon, MessageSquare, CheckCircle2, AlertCircle } from 'lucide-vue-next'
+const { t, locale } = useI18n()
 
 const form = reactive({
   name: '',
@@ -12,17 +12,35 @@ const status = ref<'idle' | 'loading' | 'success' | 'error'>('idle')
 
 const handleSubmit = async () => {
   status.value = 'loading'
-  // Simulate API call (In a real app, you'd send this to your email via a backend or service)
-  setTimeout(() => {
-    status.value = 'success'
-    form.name = ''
-    form.phone = ''
-    form.message = ''
-    
-    setTimeout(() => {
-      status.value = 'idle'
-    }, 5000)
-  }, 1500)
+  try {
+    // We use our local SMTP server route to send emails.
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: form.name,
+        whatsapp: form.phone,
+        message: form.message
+      })
+    })
+
+    if (response.ok) {
+      status.value = 'success'
+      form.name = ''
+      form.phone = ''
+      form.message = ''
+      setTimeout(() => {
+        status.value = 'idle'
+      }, 5000)
+    } else {
+      status.value = 'error'
+    }
+  } catch (error) {
+    console.error('Submission error:', error)
+    status.value = 'error'
+  }
 }
 </script>
 
@@ -50,7 +68,7 @@ const handleSubmit = async () => {
           v-model="form.name"
           type="text" 
           required
-          class="w-full px-5 py-4 rounded-2xl bg-slate-100 dark:bg-slate-800/50 border border-transparent focus:border-primary-500 focus:bg-white dark:focus:bg-slate-800 transition-all outline-none text-slate-900 dark:text-white placeholder:text-slate-400"
+          class="w-full px-5 py-4 rounded-2xl bg-slate-100 dark:bg-slate-800/50 border border-transparent focus:border-primary-500 focus:bg-white dark:focus:bg-slate-800 transition-all outline-none text-slate-900 dark:text-white placeholder:text-slate-400 font-sans"
           :placeholder="t('contact_form.name')"
         >
       </div>
@@ -58,14 +76,15 @@ const handleSubmit = async () => {
       <!-- Phone/WhatsApp -->
       <div class="space-y-2">
         <label class="text-sm font-bold text-slate-700 dark:text-slate-300 flex items-center gap-2">
-          <Phone class="w-4 h-4 text-primary-500" />
+          <PhoneIcon class="w-4 h-4 text-primary-500" />
           {{ t('contact_form.whatsapp') }}
         </label>
         <input 
           v-model="form.phone"
-          type="tel" 
+          type="text" 
           required
-          class="w-full px-5 py-4 rounded-2xl bg-slate-100 dark:bg-slate-800/50 border border-transparent focus:border-primary-500 focus:bg-white dark:focus:bg-slate-800 transition-all outline-none text-slate-900 dark:text-white placeholder:text-slate-400"
+          :dir="locale === 'ar' ? 'rtl' : 'ltr'"
+          class="w-full px-5 py-4 rounded-2xl bg-slate-100 dark:bg-slate-800/50 border border-transparent focus:border-primary-500 focus:bg-white dark:focus:bg-slate-800 transition-all outline-none text-slate-900 dark:text-white placeholder:text-slate-400 font-sans"
           :placeholder="t('contact_form.whatsapp')"
         >
       </div>
@@ -80,7 +99,7 @@ const handleSubmit = async () => {
           v-model="form.message"
           required
           rows="4"
-          class="w-full px-5 py-4 rounded-2xl bg-slate-100 dark:bg-slate-800/50 border border-transparent focus:border-primary-500 focus:bg-white dark:focus:bg-slate-800 transition-all outline-none resize-none text-slate-900 dark:text-white placeholder:text-slate-400"
+          class="w-full px-5 py-4 rounded-2xl bg-slate-100 dark:bg-slate-800/50 border border-transparent focus:border-primary-500 focus:bg-white dark:focus:bg-slate-800 transition-all outline-none resize-none text-slate-900 dark:text-white placeholder:text-slate-400 font-sans"
           :placeholder="t('contact_form.message')"
         ></textarea>
       </div>

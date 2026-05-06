@@ -35,16 +35,36 @@ const cases = computed(() => [
         <div 
           v-for="(item, index) in cases" 
           :key="item.id"
-          class="group relative bg-slate-50 dark:bg-slate-900/30 rounded-[2.5rem] p-8 md:p-12 border border-slate-100 dark:border-slate-800/50 hover:shadow-2xl transition-all duration-500 fade-in-on-scroll"
+          class="group relative rounded-[2.5rem] p-8 md:p-12 border transition-all duration-500 fade-in-on-scroll overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2"
+          :class="[
+            item.id === 'case1' ? 'bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/10 dark:to-indigo-900/10 border-blue-100 dark:border-blue-800/30' : '',
+            item.id === 'case2' ? 'bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/10 dark:to-orange-900/10 border-amber-100 dark:border-amber-800/30' : '',
+            item.id === 'case3' ? 'bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/10 dark:to-teal-900/10 border-emerald-100 dark:border-emerald-800/30' : ''
+          ]"
           :style="{ transitionDelay: `${index * 150}ms` }"
         >
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <!-- Decorative Background Elements -->
+          <div class="absolute -top-24 -right-24 w-64 h-64 opacity-10 blur-3xl rounded-full"
+            :class="[
+              item.id === 'case1' ? 'bg-blue-600' : '',
+              item.id === 'case2' ? 'bg-amber-600' : '',
+              item.id === 'case3' ? 'bg-emerald-600' : ''
+            ]"
+          ></div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
             <!-- Title and Main Theme -->
             <div class="lg:col-span-4">
               <h3 class="text-3xl font-black mb-4 text-slate-900 dark:text-white leading-tight">
                 {{ t(`solutions.${item.id}.title`) }}
               </h3>
-              <div class="w-20 h-1.5 bg-primary-600 rounded-full mb-6 group-hover:w-32 transition-all duration-500"></div>
+              <div class="w-20 h-2.5 rounded-full mb-6 group-hover:w-32 transition-all duration-500"
+                :class="[
+                  item.id === 'case1' ? 'bg-blue-600' : '',
+                  item.id === 'case2' ? 'bg-amber-600' : '',
+                  item.id === 'case3' ? 'bg-emerald-600' : ''
+                ]"
+              ></div>
             </div>
 
             <!-- Problem -> Solution -> Impact Journey -->
@@ -72,12 +92,24 @@ const cases = computed(() => [
               </div>
 
               <!-- Impact -->
-              <div class="space-y-4 bg-white dark:bg-slate-800/50 p-6 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700/50 group-hover:scale-105 transition-transform duration-500">
-                <div class="flex items-center gap-3 text-emerald-500 font-bold uppercase tracking-tighter text-sm">
+              <div class="space-y-4 p-6 rounded-3xl shadow-sm border group-hover:scale-105 transition-transform duration-500"
+                :class="[
+                  item.id === 'case1' ? 'bg-blue-100/50 dark:bg-blue-900/30 border-blue-200 dark:border-blue-700/50' : '',
+                  item.id === 'case2' ? 'bg-amber-100/50 dark:bg-amber-900/30 border-amber-200 dark:border-amber-700/50' : '',
+                  item.id === 'case3' ? 'bg-emerald-100/50 dark:bg-emerald-900/30 border-emerald-200 dark:border-emerald-700/50' : ''
+                ]"
+              >
+                <div class="flex items-center gap-3 text-emerald-500 font-bold uppercase tracking-tighter text-sm"
+                  :class="[
+                    item.id === 'case1' ? 'text-blue-600 dark:text-blue-400' : '',
+                    item.id === 'case2' ? 'text-amber-600 dark:text-amber-400' : '',
+                    item.id === 'case3' ? 'text-emerald-600 dark:text-emerald-400' : ''
+                  ]"
+                >
                   <TrendingUp class="w-5 h-5" />
                   {{ t('solutions.impact_label') }}
                 </div>
-                <p class="text-slate-900 dark:text-white font-bold leading-relaxed">
+                <p class="text-slate-900 dark:text-white font-black leading-relaxed text-lg">
                   {{ t(`solutions.${item.id}.impact`) }}
                 </p>
               </div>
