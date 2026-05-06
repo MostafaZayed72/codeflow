@@ -120,6 +120,28 @@
     "description": "Premium web development agency specializing in high-performance digital experiences. Experts in Nuxt, Vue, and custom software for the global market.",
     "ogTitle": "CodeFlow - Your Digital Success Partner",
     "ogDescription": "Transforming your ideas into stunning digital realities with the highest quality standards."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "intro": "At CodeFlow, we value your privacy and are committed to protecting your personal data.",
+    "collection": {
+      "title": "Information Collection",
+      "text": "We collect information you provide directly to us when contacting us via WhatsApp or phone."
+    },
+    "usage": {
+      "title": "Information Usage",
+      "text": "We use the information to improve our services and communicate with you regarding your requests."
+    },
+    "cookies": {
+      "title": "Cookies",
+      "text": "We use cookies to enhance your user experience on our website."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "text": "If you have any questions about this Privacy Policy, please contact us via the number provided on the site."
+    },
+    "back_home": "Back to Home",
+    "copyright": "All Rights Reserved © {year} CodeFlow"
   }
 }
 

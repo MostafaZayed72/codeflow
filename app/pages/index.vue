@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Phone, MessageSquare } from 'lucide-vue-next'
 const { locale } = useI18n()
+const localePath = useLocalePath()
 </script>
 
 <template>
@@ -45,6 +46,19 @@ const { locale } = useI18n()
             <MessageSquare class="w-8 h-8 mr-4 group-hover:rotate-12 transition-transform" />
             {{ $t('hero.cta') }}
           </a>
+
+          <!-- Footer Links & Copyright -->
+          <div class="mt-20 pt-10 border-t border-white/10 w-full flex flex-col md:flex-row items-center justify-between gap-6">
+            <p class="text-primary-200 text-sm">
+              {{ $t('privacy.copyright', { year: new Date().getFullYear() }) }}
+            </p>
+            <NuxtLink 
+              :to="localePath('/privacy')" 
+              class="text-primary-200 hover:text-white text-sm font-bold transition-colors underline underline-offset-4"
+            >
+              {{ $t('privacy.title') }}
+            </NuxtLink>
+          </div>
         </div>
       </div>
     </section>
