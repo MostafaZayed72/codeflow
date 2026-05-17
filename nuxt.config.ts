@@ -41,4 +41,4 @@ export default defineNuxtConfig({
       ]
     }
   }
-}) // Force server restart to rebuild i18n cache
+}) // Force server restart to rebuild i18n cache 2
