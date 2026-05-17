@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const { t } = useI18n()
+
 const techs = [
   'Vue.js', 'Nuxt', 'Next.js', 'React', '.NET', 'Node.js', 
   'WordPress', 'Wix', 'Tailwind CSS', 'PrimeVue', 'Three.js', 
@@ -7,10 +9,13 @@ const techs = [
 </script>
 
 <template>
-  <div class="py-10 bg-white dark:bg-[#020617] border-y border-slate-100 dark:border-slate-800/50 overflow-hidden relative group">
-    <!-- Gradient Overlays for smooth edges -->
-    <div class="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-white dark:from-[#020617] to-transparent z-10 pointer-events-none"></div>
-    <div class="absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-white dark:from-[#020617] to-transparent z-10 pointer-events-none"></div>
+  <div class="py-12 bg-white dark:bg-[#020617] border-y border-slate-100 dark:border-slate-800/50 overflow-hidden relative group">
+    <!-- Section Title -->
+    <div class="max-w-7xl mx-auto px-4 text-center mb-8">
+      <h3 class="text-xs md:text-sm font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest leading-relaxed">
+        {{ t('techstack.title') }}
+      </h3>
+    </div>
 
     <div class="flex whitespace-nowrap">
       <!-- Two sets for seamless loop -->
@@ -21,7 +26,7 @@ const techs = [
           class="flex items-center gap-4 group/item"
         >
           <div class="w-2.5 h-2.5 rounded-full bg-primary-500/30 group-hover/item:bg-primary-500 transition-colors"></div>
-          <span class="text-2xl md:text-4xl font-black text-slate-200 dark:text-slate-800/50 hover:text-primary-500 dark:hover:text-primary-500 transition-all cursor-default uppercase tracking-tighter">
+          <span class="text-2xl md:text-4xl font-black text-slate-900 dark:text-slate-100 hover:text-primary-500 dark:hover:text-primary-500 transition-all cursor-default uppercase tracking-tighter">
             {{ tech }}
           </span>
         </div>
@@ -34,7 +39,7 @@ const techs = [
           class="flex items-center gap-4 group/item"
         >
           <div class="w-2.5 h-2.5 rounded-full bg-primary-500/30 group-hover/item:bg-primary-500 transition-colors"></div>
-          <span class="text-2xl md:text-4xl font-black text-slate-200 dark:text-slate-800/50 hover:text-primary-500 dark:hover:text-primary-500 transition-all cursor-default uppercase tracking-tighter">
+          <span class="text-2xl md:text-4xl font-black text-slate-900 dark:text-slate-100 hover:text-primary-500 dark:hover:text-primary-500 transition-all cursor-default uppercase tracking-tighter">
             {{ tech }}
           </span>
         </div>

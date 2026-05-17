@@ -99,7 +99,7 @@ const services = computed(() => [
               :alt="service.title"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-slate-900/100 via-transparent to-transparent opacity-60"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-slate-900 via-transparent to-transparent opacity-20"></div>
           </div>
 
           <div class="p-8 pt-4">

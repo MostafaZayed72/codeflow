@@ -72,13 +72,13 @@ onMounted(() => {
               class="flex-none px-2 md:px-4"
               :style="{ width: `${100 / itemsToShow}%` }"
             >
-              <div class="glass-card p-6 md:p-10 relative group border-slate-200/50 dark:border-slate-800/50 h-full flex flex-col justify-between hover:border-primary-500/50 transition-all duration-500 hover:-translate-y-2">
+              <div class="glass-card font-['Tajawal'] p-6 md:p-10 relative group border-slate-200/50 dark:border-slate-800/50 h-full flex flex-col justify-between hover:border-primary-500/50 transition-all duration-500 hover:-translate-y-2">
                 <Quote 
                   class="absolute top-6 md:top-8 w-10 h-10 md:w-12 md:h-12 text-primary-500/10"
                   :class="[locale === 'ar' ? 'left-6 md:left-8' : 'right-6 md:right-8']"
                 />
                 
-                <p class="text-base md:text-xl text-slate-600 dark:text-slate-300 italic mb-6 md:mb-8 leading-relaxed relative z-10">
+                <p class="text-base md:text-xl text-slate-600 dark:text-slate-300 mb-6 md:mb-8 leading-relaxed relative z-10">
                   "{{ item.text }}"
                 </p>
                 

@@ -10,6 +10,9 @@
     "light_mode": "Light",
     "dark_mode": "Dark"
   },
+  "techstack": {
+    "title": "Modern technologies we rely on to ensure your project's performance"
+  },
   "hero": {
     "badge": "Next-Gen Web Agency",
     "title": "Digital Transformation &",
