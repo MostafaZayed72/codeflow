@@ -34,10 +34,9 @@ const { t, locale } = useI18n()
         <span class="tracking-wide uppercase text-xs">{{ t('hero.badge') }}</span>
       </div>
 
-      <!-- Hero Heading (Untouched, always white over video) -->
-      <h1 class="max-w-5xl text-4xl md:text-7xl font-black tracking-tighter mb-8 animate-fade-in-up leading-[1.15]">
+      <h1 class="max-w-5xl text-4xl md:text-7xl font-black tracking-tighter mb-8 animate-fade-in-up leading-[1.5]">
         <span class="block text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] transition-colors duration-500">{{ t('hero.title') }}</span>
-        <span class="block bg-gradient-to-r from-primary-400 via-primary-300 to-gold bg-clip-text text-transparent pb-2 drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)] transition-colors duration-500">
+        <span class="inline-block bg-gradient-to-r from-primary-400 via-primary-300 to-gold bg-clip-text text-transparent pb-6 -mb-6 pt-2 drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)] transition-colors duration-500">
           {{ t('hero.subtitle') }}
         </span>
       </h1>
