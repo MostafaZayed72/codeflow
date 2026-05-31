@@ -34,9 +34,11 @@ const { t, locale } = useI18n()
         <span class="tracking-wide uppercase text-xs">{{ t('hero.badge') }}</span>
       </div>
 
-      <h1 class="max-w-5xl text-4xl md:text-7xl font-black tracking-tighter mb-8 animate-fade-in-up leading-[1.5]">
-        <span class="block text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] transition-colors duration-500">{{ t('hero.title') }}</span>
-        <span class="inline-block bg-gradient-to-r from-primary-400 via-primary-300 to-gold bg-clip-text text-transparent pb-6 -mb-6 pt-2 drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)] transition-colors duration-500">
+      <h1 class="max-w-5xl text-3xl md:text-5xl lg:text-6xl font-black tracking-tight mb-8 animate-fade-in-up leading-[1.3] md:leading-[1.3] text-center">
+        <span class="block text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] mb-3 transition-colors duration-500">
+          {{ t('hero.title') }}
+        </span>
+        <span class="block bg-gradient-to-r from-primary-400 via-primary-300 to-gold bg-clip-text text-transparent drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)] transition-colors duration-500 pb-4">
           {{ t('hero.subtitle') }}
         </span>
       </h1>
@@ -49,7 +51,7 @@ const { t, locale } = useI18n()
       <!-- CTAs -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-6 w-full sm:w-auto animate-fade-in-up [animation-delay:400ms] mb-24">
         <a
-          href="https://wa.me/201117108646"
+          :href="locale === 'ar' ? 'https://wa.me/201117108646?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%83%D9%85%20%D9%81%D9%84%D9%88%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%83%D8%A7%D9%84%D9%85%D8%A9%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D9%8A%D8%A9%20%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D9%8A' : 'https://wa.me/201117108646?text=Hello%20CodeFlow,%20I%20would%20like%20to%20book%20a%20strategy%20call%20for%20my%20project.'"
           target="_blank"
           class="btn-primary w-full sm:w-auto gap-3 text-xl px-10 py-5 shadow-2xl shadow-primary-500/30 group"
         >
@@ -59,9 +61,9 @@ const { t, locale } = useI18n()
         <div class="relative w-full sm:w-auto group">
           <div class="absolute -inset-1 bg-gradient-to-r from-primary-600 to-gold rounded-2xl blur opacity-15 dark:opacity-25 md:opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
           <a
-            href="https://wa.me/201117108646"
+            :href="locale === 'ar' ? 'https://wa.me/201117108646?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%83%D9%85%20%D9%81%D9%84%D9%88%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%AD%D8%B5%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D8%AA%D8%AD%D9%84%D9%8A%D9%84%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%20%D9%84%D9%85%D9%88%D9%82%D8%B9%D9%8A' : 'https://wa.me/201117108646?text=Hello%20CodeFlow,%20I%20would%20like%20to%20get%20a%20free%20website%20audit.'"
             target="_blank"
-            class="relative btn-outline w-full sm:w-auto text-xl px-10 py-5 bg-white dark:bg-white/10 md:bg-white/10 backdrop-blur-sm border-2 border-slate-200 dark:border-white/20 md:border-white/20 hover:border-primary-500 text-slate-900 dark:text-white md:text-white hover:text-primary-600 dark:hover:text-white md:hover:text-white flex items-center justify-center gap-2 transition-all shadow-xl shadow-black/5 dark:shadow-black/20 md:shadow-black/20 duration-500"
+            class="relative w-full sm:w-auto text-xl px-10 py-5 bg-white/10 backdrop-blur-sm border-2 border-slate-200 dark:border-white/20 md:border-white/20 hover:border-gold hover:text-gold dark:hover:text-gold hover:bg-slate-800/10 dark:hover:bg-white/5 text-slate-900 dark:text-white md:text-white flex items-center justify-center gap-2 transition-all shadow-xl shadow-black/5 dark:shadow-black/20 md:shadow-black/20 duration-500 rounded-full font-bold"
           >
             {{ t('hero.consultation') }}
             <span class="absolute -top-3 -right-3 px-2 py-1 bg-emerald-500 text-white text-[10px] font-black rounded-lg animate-bounce uppercase tracking-tighter">

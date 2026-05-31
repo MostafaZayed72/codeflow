@@ -36,22 +36,6 @@ const projects = computed(() => [
     link: 'https://zabots.vercel.app/'
   },
   {
-    id: 5,
-    title: t('work.project5.title'),
-    category: t('work.project5.category'),
-    desc: t('work.project5.desc'),
-    image: '/projects/salhia.png',
-    link: 'https://salhiakids.vercel.app/'
-  },
-  {
-    id: 6,
-    title: t('work.project6.title'),
-    category: t('work.project6.category'),
-    desc: t('work.project6.desc'),
-    image: '/projects/khatwat.png',
-    link: 'http://khataw.at/'
-  },
-  {
     id: 7,
     title: t('work.project7.title'),
     category: t('work.project7.category'),
@@ -60,20 +44,20 @@ const projects = computed(() => [
     link: 'https://tqdr.vercel.app/'
   },
   {
-    id: 8,
-    title: t('work.project8.title'),
-    category: t('work.project8.category'),
-    desc: t('work.project8.desc'),
-    image: '/projects/mostafa_portfolio.png',
-    link: 'https://mostafa-zayed.vercel.app/'
-  },
-  {
     id: 9,
     title: t('work.project9.title'),
     category: t('work.project9.category'),
     desc: t('work.project9.desc'),
     image: '/projects/happy_paws.png',
     link: 'https://happy-paws-sepia.vercel.app/'
+  },
+  {
+    id: 10,
+    title: t('work.project10.title'),
+    category: t('work.project10.category'),
+    desc: t('work.project10.desc'),
+    image: 'https://images.unsplash.com/photo-1600518464441-9154a4dea21b?auto=format&fit=crop&q=80&w=600',
+    link: 'https://moveit-eight.vercel.app/'
   }
 ])
 </script>

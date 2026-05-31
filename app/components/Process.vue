@@ -1,11 +1,11 @@
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
 const steps = computed(() => [
-  { title: t('process.step1'), desc: 'Discovery & Goals', icon: '01' },
-  { title: t('process.step2'), desc: 'Creative Vision', icon: '02' },
-  { title: t('process.step3'), desc: 'Clean Coding', icon: '03' },
-  { title: t('process.step4'), desc: 'Going Live', icon: '04' }
+  { title: t('process.step1'), desc: locale.value === 'ar' ? 'تحديد الأهداف واستراتيجية الاستحواذ' : 'Defining objectives and customer acquisition strategy', icon: '01' },
+  { title: t('process.step2'), desc: locale.value === 'ar' ? 'تصميم تجربة مستخدم تركز على زيادة المبيعات' : 'Designing user experience focused on maximizing sales', icon: '02' },
+  { title: t('process.step3'), desc: locale.value === 'ar' ? 'كتابة الكود بأعلى معايير السرعة والأمان' : 'Coding with the highest speed & security standards', icon: '03' },
+  { title: t('process.step4'), desc: locale.value === 'ar' ? 'إطلاق الموقع ومتابعة مؤشرات التحويل' : 'Launch, analytics setup, and performance tuning', icon: '04' }
 ])
 </script>
 

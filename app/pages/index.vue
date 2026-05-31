@@ -7,11 +7,44 @@ const localePath = useLocalePath()
 <template>
   <div>
     <Hero />
-    <TechStack />
-    <Services />
     <Solutions />
-    <Work />
+    <Services />
+    
+    <!-- CRO Trust Statistics Row -->
+    <section class="py-16 bg-slate-900 dark:bg-slate-950 text-white border-y border-white/5 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 relative z-10">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          <div class="space-y-2">
+            <p class="text-4xl md:text-5xl font-black text-primary-400">99.9%</p>
+            <p class="text-sm md:text-base font-bold text-slate-300">
+              {{ locale === 'ar' ? 'معدل استقرار التشغيل' : 'Uptime Guarantee' }}
+            </p>
+          </div>
+          <div class="space-y-2">
+            <p class="text-4xl md:text-5xl font-black text-primary-400">&lt;1.2s</p>
+            <p class="text-sm md:text-base font-bold text-slate-300">
+              {{ locale === 'ar' ? 'متوسط سرعة تحميل الصفحة' : 'Avg Page Load Time' }}
+            </p>
+          </div>
+          <div class="space-y-2">
+            <p class="text-4xl md:text-5xl font-black text-primary-400">50M+</p>
+            <p class="text-sm md:text-base font-bold text-slate-300">
+              {{ locale === 'ar' ? 'تفاعل للمستخدمين قمنا بتشغيله' : 'End-User Interactions' }}
+            </p>
+          </div>
+          <div class="space-y-2">
+            <p class="text-4xl md:text-5xl font-black text-primary-400">100%</p>
+            <p class="text-sm md:text-base font-bold text-slate-300">
+              {{ locale === 'ar' ? 'أكواد برمجية مخصصة' : 'Custom Built Code' }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Process />
     <Testimonials />
+    <Work />
     
     <!-- Final CTA Section -->
     <section id="contact" class="py-24 bg-primary-900 text-white relative overflow-hidden fade-in-on-scroll">
@@ -47,7 +80,7 @@ const localePath = useLocalePath()
                 class="inline-flex items-center justify-center px-12 py-6 rounded-3xl bg-white text-primary-900 font-bold text-2xl hover:bg-gold hover:text-white transition-all duration-300 shadow-[0_20px_50px_rgba(255,255,255,0.1)] hover:-translate-y-2 group w-full lg:w-auto"
               >
                 <MessageSquare class="w-8 h-8 mr-4 group-hover:rotate-12 transition-transform" />
-                {{ t('hero.cta') }}
+                {{ locale === 'ar' ? 'تواصل سريع عبر واتساب' : 'Fast WhatsApp Chat' }}
               </a>
             </div>
 

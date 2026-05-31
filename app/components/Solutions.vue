@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { AlertCircle, Lightbulb, TrendingUp } from 'lucide-vue-next'
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
 const cases = computed(() => [
   {

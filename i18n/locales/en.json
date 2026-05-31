@@ -1,10 +1,10 @@
 {
   "nav": {
     "services": "Services",
-    "solutions": "Solutions",
-    "work": "Portfolio",
-    "testimonials": "Testimonials",
-    "contact": "Contact Us",
+    "solutions": "Case Studies",
+    "work": "Client Work",
+    "testimonials": "Reviews",
+    "contact": "Book Strategy Call",
     "language": "Language",
     "theme": "Theme",
     "light_mode": "Light",
@@ -14,50 +14,38 @@
     "title": "Modern technologies we rely on to ensure your project's performance"
   },
   "hero": {
-    "badge": "Next-Gen Web Agency",
-    "title": "Websites with",
-    "subtitle": "Exceptional Performance",
-    "description": "Get a completely free Demo version for your project and experience the difference before you start. Our team is ready to turn your idea into reality now.",
-    "cta": "Contact Us",
-    "consultation": "Request Free Demo"
+    "badge": "Conversion-Focused Web Agency",
+    "title": "We Build Websites That Turn Visitors Into",
+    "subtitle": "Paying Clients & Revenue",
+    "description": "Premium web design, speed-optimized development, and UX built for business growth. Specialized in helping GCC startups and established businesses acquire customers online.",
+    "cta": "Book a Free 15-Min Strategy Call",
+    "consultation": "Get a Free Website Audit"
   },
   "services": {
-    "title": "Our Specialized Services",
+    "title": "Specialized Solutions for Growth",
+    "design": {
+      "title": "High-Converting UX/UI Design",
+      "desc": "Bespoke, stunning web interfaces designed with buyer psychology to guide visitors directly into your sales funnel."
+    },
+    "development": {
+      "title": "High-Performance Web Development",
+      "desc": "Lightning-fast, clean-coded websites built using modern frameworks to ensure peak performance, stability, and speed."
+    },
+    "redesign": {
+      "title": "Conversion-Focused Redesigns",
+      "desc": "Transform your outdated website into a modern, high-performing lead generation engine that outranks your competitors."
+    },
     "wordpress": {
-      "title": "Professional WordPress",
-      "desc": "Fast, secure, and easy-to-manage WordPress websites tailored to your brand."
+      "title": "Enterprise WordPress Development",
+      "desc": "Scalable, secure, and editor-friendly WordPress sites built with custom themes, giving your marketing team full control."
+    },
+    "framer": {
+      "title": "Framer Websites for Startups",
+      "desc": "Stunning, animated marketing pages built and launched rapidly in Framer to validate ideas and capture leads fast."
     },
     "custom": {
-      "title": "Custom Development",
-      "desc": "Bespoke software solutions built with cutting-edge tech to solve unique challenges."
-    },
-    "seo": {
-      "title": "SEO Optimization",
-      "desc": "Rank higher on search engines and drive organic growth with proven strategies."
-    },
-    "marketing": {
-      "title": "Digital Marketing",
-      "desc": "Creative ad campaigns to boost brand awareness and drive sales."
-    },
-    "apps": {
-      "title": "Mobile Apps",
-      "desc": "Building seamless and powerful iOS & Android applications for your users."
-    },
-    "maintenance": {
-      "title": "Support & Maintenance",
-      "desc": "Continuous technical support to ensure your site runs at peak performance."
-    },
-    "clinics": {
-      "title": "Clinic Systems",
-      "desc": "Integrated systems for managing clinics, medical centers, bookings, and patient records."
-    },
-    "erp": {
-      "title": "ERP Systems",
-      "desc": "Software solutions for resource management, inventory, accounting, and HR in one platform."
-    },
-    "automation": {
-      "title": "Automation & n8n",
-      "desc": "Connecting apps and automating repetitive tasks using n8n to boost productivity."
+      "title": "Custom Web Applications",
+      "desc": "Bespoke internal systems, customer portals, and database integrations built to streamline operations and cut costs."
     }
   },
   "features": {
@@ -66,39 +54,25 @@
     "seo": { "title": "SEO Ready", "desc": "Optimized for search engines to drive organic growth." }
   },
   "process": {
-    "title": "Our Proven Process",
-    "step1": "Brief",
-    "step2": "Design",
-    "step3": "Develop",
-    "step4": "Launch"
+    "title": "Our Transparent Process",
+    "step1": "1. Strategy & Wireframing",
+    "step2": "2. High-Fidelity UI Design",
+    "step3": "3. Speed-First Coding",
+    "step4": "4. Launch & Optimization"
   },
   "work": {
-    "title": "Our Featured Work",
-    "view_project": "View Project",
-    "project1": { "title": "SN&P", "category": "Cybersecurity", "desc": "Professional platform for cyber threat protection and exploit detection." },
-    "project2": { "title": "Square One", "category": "Real Estate", "desc": "Integrated digital identity for a major real estate development company." },
-    "project3": { "title": "Dam (دام)", "category": "Community Platform", "desc": "Interactive map for discovering community activities and events in Saudi Arabia." },
-    "project4": { "title": "Zabots", "category": "AI Automation", "desc": "Smart system for managing conversations and turning them into sales." },
-    "project5": { "title": "Kids Platform", "category": "Educational", "desc": "Educational content and interactive stories for children in a safe environment." },
-    "project6": { "title": "Khatwat (خطوات)", "category": "Language Learning", "desc": "Specialized program for teaching Arabic to non-native speakers." },
-    "project7": {
-      "title": "Tqdr System",
-      "category": "Installment System",
-      "desc": "An integrated system for installment services and products with an advanced dashboard."
-    },
-    "project8": {
-      "title": "Mostafa Zayed Portfolio",
-      "category": "Personal Website",
-      "desc": "Design and development of a professional portfolio reflecting visual identity and technical skills."
-    },
-    "project9": {
-      "title": "Happy Paws",
-      "category": "Pet Store",
-      "desc": "An integrated platform for pet services and products with a modern and attractive design."
-    }
+    "title": "Real Solutions, Real Business Results",
+    "view_project": "View Live Site",
+    "project1": { "title": "SN&P", "category": "Cybersecurity", "desc": "Enterprise-grade threat protection platform designed for high security and buyer trust." },
+    "project2": { "title": "Square One", "category": "Real Estate", "desc": "High-performance digital identity and property listing engine for a major developer." },
+    "project3": { "title": "Dam (دام)", "category": "Community Platform", "desc": "Interactive geolocated map discovering local Saudi events, built for massive traffic." },
+    "project4": { "title": "Zabots", "category": "AI Automation", "desc": "Smart lead capturing system automating conversations into booked sales calls." },
+    "project7": { "title": "Tqdr System", "category": "Fintech Platform", "desc": "Frictionless installment checkout flow and customer management dashboard." },
+    "project9": { "title": "Happy Paws", "category": "E-Commerce", "desc": "Modern pet e-commerce platform optimized for high average order value and fast checkout." },
+    "project10": { "title": "MoveIt", "category": "Logistics & Moving", "desc": "On-demand relocation platform with interactive instant quote pricing calculators." }
   },
   "testimonials": {
-    "title": "Client Success Stories",
+    "title": "What Our Clients Say About Us",
     "client1": { 
       "name": "Dr. Ibrahim Al-Suwaidi", 
       "role": "CEO of Al-Qamma Holding", 
@@ -125,7 +99,7 @@
     },
     "client5": { 
       "name": "Eng. Yasser Al-Qahtani", 
-      "role": "Entrepreneur - Founder of Wasl Co.", 
+      "role": "Founder of Wasl Co.", 
       "text": "The best web development experience I've had. The site is very fast and user-friendly, which boosted our customers' trust and sales.",
       "image": "/avatars/client5.png"
     },
@@ -173,42 +147,42 @@
     }
   },
   "solutions": {
-    "title": "How We Solve Problems",
-    "subtitle": "We don't just showcase skills; we transform challenges into measurable success",
+    "title": "Case Studies",
+    "subtitle": "How we turn complex challenges into measurable business success",
     "problem_label": "Problem",
     "solution_label": "Solution",
-    "impact_label": "Impact",
+    "impact_label": "Business Outcome",
     "case1": {
       "title": "Turning Sluggishness into Sales",
-      "problem": "An e-commerce store with a 70% bounce rate due to slow loading speeds.",
-      "solution": "Rebuilt using modern web tech (Nuxt 4) and high-level performance tuning.",
-      "impact": "45% increase in sales and load time reduced to under 1 second."
+      "problem": "An e-commerce store losing 70% of visitors due to a 5-second page load time.",
+      "solution": "Rebuilt using Nuxt 3, optimized imagery, and set up advanced edge caching.",
+      "impact": "Page speed reduced to 0.8s, resulting in a 45% increase in sales."
     },
     "case2": {
       "title": "Dominating Search Results",
-      "problem": "A real estate company failing to rank on the first page for key terms.",
-      "solution": "Advanced technical SEO audit and a strategic content architecture.",
-      "impact": "Ranked #1 for 15 core keywords and 300% growth in organic traffic."
+      "problem": "A premium real estate developer invisible on the first page of Google KSA.",
+      "solution": "Conducted a complete technical SEO audit and restructured property content layout.",
+      "impact": "Ranked #1 for 15 primary keywords, driving a 300% growth in qualified leads."
     },
     "case3": {
       "title": "Automating Complex Workflows",
-      "problem": "Manual booking management was wasting 4 hours of staff time daily.",
-      "solution": "Custom automation system integrating the site with WhatsApp and Google Calendar.",
-      "impact": "Saved 20 hours per week and reduced booking errors by 95%."
+      "problem": "Booking appointments manually was wasting 4 hours of medical staff time daily.",
+      "solution": "Built a custom automation system connecting the site with WhatsApp API and Google Calendar.",
+      "impact": "Saved 20 hours per week and reduced appointment errors by 95%."
     }
   },
   "seo": {
-    "title": "CodeFlow | Digital Transformation & High Performance Agency",
-    "description": "Premium web development agency specializing in high-performance digital experiences. Experts in Nuxt, Vue, and custom software for the global market.",
-    "ogTitle": "CodeFlow - Your Digital Success Partner",
-    "ogDescription": "Transforming your ideas into stunning digital realities with the highest quality standards."
+    "title": "CodeFlow | High-Converting Web Design & Development Agency",
+    "description": "Premium web agency specializing in high-performance websites, custom web applications, and conversion-focused landing pages for Saudi Arabia & GCC.",
+    "ogTitle": "CodeFlow - Your Revenue-Driving Web Partner",
+    "ogDescription": "Converting visitors into paying clients with high-speed websites, clean code, and premium UI/UX design."
   },
   "privacy": {
     "title": "Privacy Policy",
     "intro": "At CodeFlow, we value your privacy and are committed to protecting your personal data.",
     "collection": {
       "title": "Information Collection",
-      "text": "We collect information you provide directly to us when contacting us via WhatsApp or phone."
+      "text": "We collect information you provide directly to us when contacting us via WhatsApp or booking a call."
     },
     "usage": {
       "title": "Information Usage",
@@ -226,21 +200,20 @@
     "copyright": "All Rights Reserved © {year} CodeFlow"
   },
   "contact_form": {
-    "title": "Send Us a Message",
-    "subtitle": "We'll get back to you within 24 hours",
+    "title": "Book a Free 15-Min Strategy Call",
+    "subtitle": "Select a time or send us a message below. We reply in under 24 hours.",
     "name": "Full Name",
-    "whatsapp": "WhatsApp Number",
-    "message": "How can we help you?",
-    "submit": "Send Message",
-    "success": "Your message was sent successfully! We'll contact you soon.",
+    "whatsapp": "Phone Number (with Country Code)",
+    "message": "Tell us about your project & business goals",
+    "submit": "Submit Request",
+    "success": "Your request has been received! We'll contact you within 24 hours to schedule your strategy call.",
     "error": "Something went wrong, please try again."
   },
   "locations": {
-    "title": "Proudly Serving the Arab Market",
-    "description": "We specialize in meeting the needs of companies in the GCC and the Middle East.",
-    "egypt": "Egypt",
-    "ksa": "Saudi Arabia",
-    "gcc": "GCC Countries"
+    "title": "Proudly Serving KSA & The Arab Market",
+    "description": "We build digital solutions optimized specifically for companies in Saudi Arabia and the GCC.",
+    "egypt": "Egypt Office",
+    "ksa": "Saudi Arabia Focus",
+    "gcc": "GCC Compliance"
   }
 }
-
