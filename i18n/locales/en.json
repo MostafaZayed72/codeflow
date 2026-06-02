@@ -19,7 +19,7 @@
     "subtitle": "Paying Clients & Revenue",
     "description": "Premium web design, speed-optimized development, and UX built for business growth. Specialized in helping GCC startups and established businesses acquire customers online.",
     "cta": "Contact Us Now",
-    "consultation": "Get a Free Website Audit"
+    "consultation": "Get a Free Demo of Your Website"
   },
   "services": {
     "title": "Specialized Solutions for Growth",
@@ -199,7 +199,10 @@
     "back_home": "Back to Home",
     "copyright": "All Rights Reserved © {year} CodeFlow"
   },
-  "cta_section_btn": "Book Your Free Consultation Now",
+  "cta_btn_try": "Try Now For Free",
+  "cta_btn_contact": "Contact Us",
+  "cta_btn_start": "Start Your Project Now",
+  "cta_btn_consult": "Get a Free Consultation",
   "contact_form": {
     "title": "Book a Free 15-Min Strategy Call",
     "subtitle": "Select a time or send us a message below. We reply in under 24 hours.",

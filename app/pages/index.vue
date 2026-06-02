@@ -16,7 +16,7 @@ const localePath = useLocalePath()
         @click="$trackClick('cta_solutions_bottom')"
         class="inline-flex items-center justify-center gap-2 px-6 sm:px-10 py-4 sm:py-5 rounded-full font-bold text-sm sm:text-xl transition-all duration-300 bg-primary-600 text-white hover:bg-primary-700 hover:shadow-2xl hover:shadow-primary-500/20 hover:-translate-y-1 active:translate-y-0 active:shadow-md group whitespace-nowrap"
       >
-        <span>{{ t('cta_section_btn') }}</span>
+        <span>{{ t('cta_btn_start') }}</span>
         <ArrowRight class="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" :class="[locale === 'ar' ? 'rotate-180 group-hover:-translate-x-1' : '']" />
       </a>
     </div>
@@ -62,7 +62,7 @@ const localePath = useLocalePath()
         @click="$trackClick('cta_services_bottom')"
         class="inline-flex items-center justify-center gap-2 px-6 sm:px-10 py-4 sm:py-5 rounded-full font-bold text-sm sm:text-xl transition-all duration-300 bg-primary-600 text-white hover:bg-primary-700 hover:shadow-2xl hover:shadow-primary-500/20 hover:-translate-y-1 active:translate-y-0 active:shadow-md group whitespace-nowrap"
       >
-        <span>{{ t('cta_section_btn') }}</span>
+        <span>{{ t('cta_btn_consult') }}</span>
         <ArrowRight class="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" :class="[locale === 'ar' ? 'rotate-180 group-hover:-translate-x-1' : '']" />
       </a>
     </div>
@@ -76,7 +76,7 @@ const localePath = useLocalePath()
         @click="$trackClick('cta_process_bottom')"
         class="inline-flex items-center justify-center gap-2 px-6 sm:px-10 py-4 sm:py-5 rounded-full font-bold text-sm sm:text-xl transition-all duration-300 bg-primary-600 text-white hover:bg-primary-700 hover:shadow-2xl hover:shadow-primary-500/20 hover:-translate-y-1 active:translate-y-0 active:shadow-md group whitespace-nowrap"
       >
-        <span>{{ t('cta_section_btn') }}</span>
+        <span>{{ t('cta_btn_try') }}</span>
         <ArrowRight class="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" :class="[locale === 'ar' ? 'rotate-180 group-hover:-translate-x-1' : '']" />
       </a>
     </div>
@@ -90,7 +90,7 @@ const localePath = useLocalePath()
         @click="$trackClick('cta_testimonials_bottom')"
         class="inline-flex items-center justify-center gap-2 px-6 sm:px-10 py-4 sm:py-5 rounded-full font-bold text-sm sm:text-xl transition-all duration-300 bg-primary-600 text-white hover:bg-primary-700 hover:shadow-2xl hover:shadow-primary-500/20 hover:-translate-y-1 active:translate-y-0 active:shadow-md group whitespace-nowrap"
       >
-        <span>{{ t('cta_section_btn') }}</span>
+        <span>{{ t('cta_btn_contact') }}</span>
         <ArrowRight class="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" :class="[locale === 'ar' ? 'rotate-180 group-hover:-translate-x-1' : '']" />
       </a>
     </div>
