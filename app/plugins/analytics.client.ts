@@ -18,6 +18,15 @@ export default defineNuxtPlugin((nuxtApp) => {
   return {
     provide: {
       trackClick: (label: string) => {
+        // Fire Google Ads click event
+        const win = window as any
+        if (typeof win.gtag === 'function') {
+          win.gtag('event', 'click', {
+            event_category: 'engagement',
+            event_label: label
+          })
+        }
+
         $fetch('/api/analytics', {
           method: 'POST',
           body: {
@@ -27,6 +36,15 @@ export default defineNuxtPlugin((nuxtApp) => {
         }).catch(err => console.error('Analytics click track failed', err))
       },
       trackFormSubmit: () => {
+        // Fire Google Ads lead conversion event
+        const win = window as any
+        if (typeof win.gtag === 'function') {
+          win.gtag('event', 'lead', {
+            event_category: 'form',
+            event_label: 'contact_form'
+          })
+        }
+
         $fetch('/api/analytics', {
           method: 'POST',
           body: {
