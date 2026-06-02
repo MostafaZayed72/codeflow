@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Phone, MessageSquare } from 'lucide-vue-next'
+import { Phone, MessageSquare, ArrowRight } from 'lucide-vue-next'
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
 </script>
@@ -8,6 +8,19 @@ const localePath = useLocalePath()
   <div>
     <Hero />
     <Solutions />
+
+    <!-- Solutions CTA -->
+    <div class="flex justify-center pb-24 bg-white dark:bg-[#020617] fade-in-on-scroll">
+      <a
+        href="#contact"
+        @click="$trackClick('cta_solutions_bottom')"
+        class="inline-flex items-center justify-center gap-2 px-6 sm:px-10 py-4 sm:py-5 rounded-full font-bold text-sm sm:text-xl transition-all duration-300 bg-primary-600 text-white hover:bg-primary-700 hover:shadow-2xl hover:shadow-primary-500/20 hover:-translate-y-1 active:translate-y-0 active:shadow-md group whitespace-nowrap"
+      >
+        <span>{{ t('cta_section_btn') }}</span>
+        <ArrowRight class="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" :class="[locale === 'ar' ? 'rotate-180 group-hover:-translate-x-1' : '']" />
+      </a>
+    </div>
+
     <Services />
     
     <!-- CRO Trust Statistics Row -->
@@ -42,8 +55,46 @@ const localePath = useLocalePath()
       </div>
     </section>
 
+    <!-- Services & Stats CTA -->
+    <div class="flex justify-center py-20 bg-white dark:bg-[#020617] fade-in-on-scroll">
+      <a
+        href="#contact"
+        @click="$trackClick('cta_services_bottom')"
+        class="inline-flex items-center justify-center gap-2 px-6 sm:px-10 py-4 sm:py-5 rounded-full font-bold text-sm sm:text-xl transition-all duration-300 bg-primary-600 text-white hover:bg-primary-700 hover:shadow-2xl hover:shadow-primary-500/20 hover:-translate-y-1 active:translate-y-0 active:shadow-md group whitespace-nowrap"
+      >
+        <span>{{ t('cta_section_btn') }}</span>
+        <ArrowRight class="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" :class="[locale === 'ar' ? 'rotate-180 group-hover:-translate-x-1' : '']" />
+      </a>
+    </div>
+
     <Process />
+
+    <!-- Process CTA -->
+    <div class="flex justify-center pb-24 bg-white dark:bg-[#020617] fade-in-on-scroll">
+      <a
+        href="#contact"
+        @click="$trackClick('cta_process_bottom')"
+        class="inline-flex items-center justify-center gap-2 px-6 sm:px-10 py-4 sm:py-5 rounded-full font-bold text-sm sm:text-xl transition-all duration-300 bg-primary-600 text-white hover:bg-primary-700 hover:shadow-2xl hover:shadow-primary-500/20 hover:-translate-y-1 active:translate-y-0 active:shadow-md group whitespace-nowrap"
+      >
+        <span>{{ t('cta_section_btn') }}</span>
+        <ArrowRight class="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" :class="[locale === 'ar' ? 'rotate-180 group-hover:-translate-x-1' : '']" />
+      </a>
+    </div>
+
     <Testimonials />
+
+    <!-- Testimonials CTA -->
+    <div class="flex justify-center pb-24 bg-slate-50 dark:bg-[#020617] fade-in-on-scroll">
+      <a
+        href="#contact"
+        @click="$trackClick('cta_testimonials_bottom')"
+        class="inline-flex items-center justify-center gap-2 px-6 sm:px-10 py-4 sm:py-5 rounded-full font-bold text-sm sm:text-xl transition-all duration-300 bg-primary-600 text-white hover:bg-primary-700 hover:shadow-2xl hover:shadow-primary-500/20 hover:-translate-y-1 active:translate-y-0 active:shadow-md group whitespace-nowrap"
+      >
+        <span>{{ t('cta_section_btn') }}</span>
+        <ArrowRight class="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" :class="[locale === 'ar' ? 'rotate-180 group-hover:-translate-x-1' : '']" />
+      </a>
+    </div>
+
     <Work />
     
     <!-- Final CTA Section -->

@@ -6,7 +6,7 @@ const { t, locale } = useI18n()
 <template>
   <section class="relative min-h-[85vh] md:min-h-[90vh] flex flex-col justify-center pt-32 pb-16 md:pt-28 md:pb-20 overflow-hidden bg-slate-50 dark:bg-slate-950 md:bg-slate-950 transition-colors duration-500">
     <!-- Advanced Clean Background System with Video -->
-    <div class="absolute inset-x-0 top-0 h-[60vh] md:h-full md:inset-0 z-0 pointer-events-none overflow-hidden bg-slate-950">
+    <div class="absolute inset-x-0 top-0 h-[75vh] md:h-full md:inset-0 z-0 pointer-events-none overflow-hidden bg-slate-950">
       <!-- Responsive Background Video -->
       <video
         autoplay
@@ -22,9 +22,7 @@ const { t, locale } = useI18n()
       <!-- Unified Professional Cinematic Dark Filter for ultimate text contrast -->
       <div class="absolute inset-0 bg-slate-950/45 dark:bg-slate-950/65"></div>
 
-      <!-- Theme-Aware Seamless Fade Gradient for Mobile -->
-      <!-- Blends the dark video gracefully into the white/dark background below -->
-      <div class="block md:hidden absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-slate-50 dark:from-slate-950 to-transparent transition-colors duration-500"></div>
+      <!-- Theme-Aware Mobile Fade Gradient removed to avoid the light glow covering description -->
     </div>
 
     <div class="max-w-7xl mx-auto px-4 w-full text-center relative z-10 flex flex-col items-center">
@@ -48,30 +46,32 @@ const { t, locale } = useI18n()
         {{ t('hero.description') }}
       </p>
 
-      <!-- CTAs -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-6 w-full sm:w-auto animate-fade-in-up [animation-delay:400ms] mb-24">
-        <a
-          :href="locale === 'ar' ? 'https://wa.me/201099658770?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20CodeFlow%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%83%D8%A7%D9%84%D9%85%D8%A9%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D9%8A%D8%A9%20%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D9%8A' : 'https://wa.me/201099658770?text=Hello%20CodeFlow,%20I%20would%20like%20to%20book%20a%20strategy%20call%20for%20my%20project.'"
-          target="_blank"
-          @click="$trackClick('hero_strategy_call')"
-          class="btn-primary w-full sm:w-auto gap-3 text-xl px-10 py-5 shadow-2xl shadow-primary-500/30 group"
-        >
-          {{ t('hero.cta') }}
-          <ArrowRight class="w-6 h-6 group-hover:translate-x-1 transition-transform" :class="[locale === 'ar' ? 'rotate-180 group-hover:-translate-x-1' : '']" />
-        </a>
-        <div class="relative w-full sm:w-auto group">
-          <div class="absolute -inset-1 bg-gradient-to-r from-primary-600 to-gold rounded-2xl blur opacity-15 dark:opacity-25 md:opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+      <!-- CTAs with Colored Background on Mobile -->
+      <div class="w-full max-w-4xl mx-auto p-6 md:p-0 rounded-[2.5rem] bg-primary-50/50 dark:bg-primary-950/20 md:bg-transparent border border-primary-100/50 dark:border-primary-900/30 md:border-none shadow-xl shadow-primary-900/5 dark:shadow-black/30 md:shadow-none animate-fade-in-up [animation-delay:400ms] mb-24 mt-12">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 w-full sm:w-auto">
           <a
-            :href="locale === 'ar' ? 'https://wa.me/201099658770?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20CodeFlow%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%AD%D8%B5%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D8%AA%D8%AD%D9%84%D9%8A%D9%84%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%20%D9%84%D9%85%D9%88%D9%82%D8%B9%D9%8A' : 'https://wa.me/201099658770?text=Hello%20CodeFlow,%20I%20would%20like%20to%20get%20a%20free%20website%20audit.'"
+            :href="locale === 'ar' ? 'https://wa.me/201099658770?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20CodeFlow%D8%8C%20%D8%A3%D9%8ود%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%83%D8%A7%D9%84%D9%85%D8%A9%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D9%8A%D8%A9%20%D9%84%D9%85%D9%88%D8%A8%D8%A7%D9%8A%D9%84%D9%8I' : 'https://wa.me/201099658770?text=Hello%20CodeFlow,%20I%20would%20like%20to%20book%20a%20strategy%20call%20for%20my%20project.'"
             target="_blank"
-            @click="$trackClick('hero_free_audit')"
-            class="relative w-full sm:w-auto text-xl px-10 py-5 bg-white/10 backdrop-blur-sm border-2 border-slate-200 dark:border-white/20 md:border-white/20 hover:border-gold hover:text-gold dark:hover:text-gold hover:bg-slate-800/10 dark:hover:bg-white/5 text-slate-900 dark:text-white md:text-white flex items-center justify-center gap-2 transition-all shadow-xl shadow-black/5 dark:shadow-black/20 md:shadow-black/20 duration-500 rounded-full font-bold"
+            @click="$trackClick('hero_strategy_call')"
+            class="btn-primary w-full sm:w-auto gap-2 text-sm sm:text-xl px-6 sm:px-10 py-4 sm:py-5 shadow-2xl shadow-primary-500/30 group whitespace-nowrap"
           >
-            {{ t('hero.consultation') }}
-            <span class="absolute -top-3 -right-3 px-2 py-1 bg-emerald-500 text-white text-[10px] font-black rounded-lg animate-bounce uppercase tracking-tighter">
-              Free
-            </span>
+            {{ t('hero.cta') }}
+            <ArrowRight class="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" :class="[locale === 'ar' ? 'rotate-180 group-hover:-translate-x-1' : '']" />
           </a>
+          <div class="relative w-full sm:w-auto group">
+            <div class="absolute -inset-1 bg-gradient-to-r from-primary-600 to-gold rounded-2xl blur opacity-15 dark:opacity-25 md:opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+            <a
+              :href="locale === 'ar' ? 'https://wa.me/201099658770?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20CodeFlow%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%AD%D8%B5%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D8%AA%D8%AD%D9%84%D9%8A%D9%84%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%20%D9%84%D9%85%D9%88%D9%82%D8%B9%D9%8I' : 'https://wa.me/201099658770?text=Hello%20CodeFlow,%20I%20would%20like%20to%20get%20a%20free%20website%20audit.'"
+              target="_blank"
+              @click="$trackClick('hero_free_audit')"
+              class="relative w-full sm:w-auto text-sm sm:text-xl px-4 sm:px-10 py-4 sm:py-5 bg-white dark:bg-white/10 backdrop-blur-sm border-2 border-slate-200 dark:border-white/20 md:border-white/20 hover:border-gold hover:text-gold dark:hover:text-gold hover:bg-slate-50 dark:hover:bg-white/5 text-slate-900 dark:text-white md:text-white flex items-center justify-center gap-2 transition-all shadow-xl shadow-black/5 dark:shadow-black/20 md:shadow-black/20 duration-500 rounded-full font-bold whitespace-nowrap"
+            >
+              {{ t('hero.consultation') }}
+              <span class="absolute -top-3 -right-3 px-2 py-1 bg-emerald-500 text-white text-[10px] font-black rounded-lg animate-bounce uppercase tracking-tighter">
+                Free
+              </span>
+            </a>
+          </div>
         </div>
       </div>
 

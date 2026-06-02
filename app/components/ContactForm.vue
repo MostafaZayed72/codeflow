@@ -51,7 +51,7 @@ const handleSubmit = async () => {
 </script>
 
 <template>
-  <div class="glass-card p-8 md:p-10 border-slate-200/50 dark:border-slate-800/50 shadow-2xl relative overflow-hidden">
+  <div class="glass-card p-5 sm:p-8 md:p-10 border-slate-200/50 dark:border-slate-800/50 shadow-2xl relative overflow-hidden">
     <!-- Success Overlay -->
     <Transition name="fade">
       <div v-if="status === 'success'" class="absolute inset-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md z-20 flex flex-col items-center justify-center text-center p-6">
@@ -60,7 +60,7 @@ const handleSubmit = async () => {
       </div>
     </Transition>
 
-    <h3 class="text-3xl font-black mb-2 text-slate-900 dark:text-white">{{ t('contact_form.title') }}</h3>
+    <h3 class="text-2xl sm:text-3xl font-black mb-2 text-slate-900 dark:text-white">{{ t('contact_form.title') }}</h3>
     <p class="text-slate-500 dark:text-slate-400 mb-8">{{ t('contact_form.subtitle') }}</p>
 
     <form @submit.prevent="handleSubmit" class="space-y-6">
@@ -74,7 +74,7 @@ const handleSubmit = async () => {
           v-model="form.name"
           type="text" 
           required
-          class="w-full px-5 py-4 rounded-2xl bg-slate-100 dark:bg-slate-800/50 border border-transparent focus:border-primary-500 focus:bg-white dark:focus:bg-slate-800 transition-all outline-none text-slate-900 dark:text-white placeholder:text-slate-400 font-sans"
+          class="w-full px-4 sm:px-5 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl bg-slate-100 dark:bg-slate-800/50 border border-transparent focus:border-primary-500 focus:bg-white dark:focus:bg-slate-800 transition-all outline-none text-sm sm:text-base text-slate-900 dark:text-white placeholder:text-slate-400 font-sans"
           :placeholder="t('contact_form.name')"
         >
       </div>
@@ -90,7 +90,7 @@ const handleSubmit = async () => {
           type="text" 
           required
           :dir="locale === 'ar' ? 'rtl' : 'ltr'"
-          class="w-full px-5 py-4 rounded-2xl bg-slate-100 dark:bg-slate-800/50 border border-transparent focus:border-primary-500 focus:bg-white dark:focus:bg-slate-800 transition-all outline-none text-slate-900 dark:text-white placeholder:text-slate-400 font-sans"
+          class="w-full px-4 sm:px-5 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl bg-slate-100 dark:bg-slate-800/50 border border-transparent focus:border-primary-500 focus:bg-white dark:focus:bg-slate-800 transition-all outline-none text-sm sm:text-base text-slate-900 dark:text-white placeholder:text-slate-400 font-sans"
           :placeholder="t('contact_form.whatsapp')"
         >
       </div>
@@ -105,7 +105,7 @@ const handleSubmit = async () => {
           v-model="form.message"
           required
           rows="4"
-          class="w-full px-5 py-4 rounded-2xl bg-slate-100 dark:bg-slate-800/50 border border-transparent focus:border-primary-500 focus:bg-white dark:focus:bg-slate-800 transition-all outline-none resize-none text-slate-900 dark:text-white placeholder:text-slate-400 font-sans"
+          class="w-full px-4 sm:px-5 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl bg-slate-100 dark:bg-slate-800/50 border border-transparent focus:border-primary-500 focus:bg-white dark:focus:bg-slate-800 transition-all outline-none resize-none text-sm sm:text-base text-slate-900 dark:text-white placeholder:text-slate-400 font-sans"
           :placeholder="t('contact_form.message')"
         ></textarea>
       </div>
@@ -113,7 +113,7 @@ const handleSubmit = async () => {
       <button 
         type="submit"
         :disabled="status === 'loading'"
-        class="btn-primary w-full py-5 text-xl font-black rounded-2xl shadow-xl shadow-primary-500/20 flex items-center justify-center gap-3 group"
+        class="btn-primary w-full py-4 sm:py-5 text-lg sm:text-xl font-black rounded-xl sm:rounded-2xl shadow-xl shadow-primary-500/20 flex items-center justify-center gap-3 group"
       >
         <span v-if="status === 'loading'" class="w-6 h-6 border-4 border-white/30 border-t-white rounded-full animate-spin"></span>
         <template v-else>
@@ -132,7 +132,7 @@ const handleSubmit = async () => {
 
 <style scoped>
 .glass-card {
-  @apply bg-white/80 dark:bg-slate-900/40 backdrop-blur-xl rounded-[2.5rem] border transition-all duration-300;
+  @apply bg-white/80 dark:bg-slate-900/40 backdrop-blur-xl rounded-[1.75rem] sm:rounded-[2.5rem] border transition-all duration-300;
 }
 
 .fade-enter-active, .fade-leave-active {
