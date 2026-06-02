@@ -63,7 +63,7 @@ const projects = computed(() => [
 </script>
 
 <template>
-  <section id="work" class="py-24 bg-white dark:bg-[#020617] fade-in-on-scroll">
+  <section id="work" class="py-16 md:py-24 bg-white dark:bg-[#020617] fade-in-on-scroll">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-16">
         <h2 class="section-title inline-block mb-4">{{ t('work.title') }}</h2>

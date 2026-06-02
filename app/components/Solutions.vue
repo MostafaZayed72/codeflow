@@ -22,7 +22,7 @@ const cases = computed(() => [
 </script>
 
 <template>
-  <section id="solutions" class="py-24 bg-white dark:bg-[#020617] fade-in-on-scroll">
+  <section id="solutions" class="py-16 md:py-24 bg-white dark:bg-[#020617] fade-in-on-scroll">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-16">
         <h2 class="section-title inline-block mb-4">{{ t('solutions.title') }}</h2>
@@ -55,7 +55,7 @@ const cases = computed(() => [
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center relative z-10">
             <!-- Title and Main Theme -->
             <div class="lg:col-span-4 text-center lg:text-right" :class="[locale === 'ar' ? 'lg:text-right' : 'lg:text-left']">
-              <h3 class="text-2xl md:text-3xl font-black mb-4 text-slate-900 dark:text-white leading-tight">
+              <h3 class="text-lg xs:text-xl sm:text-2xl md:text-3xl font-black mb-4 text-slate-900 dark:text-white leading-tight">
                 {{ t(`solutions.${item.id}.title`) }}
               </h3>
               <div class="w-16 h-2 md:w-20 md:h-2.5 rounded-full mb-6 mx-auto lg:mx-0 group-hover:w-32 transition-all duration-500"

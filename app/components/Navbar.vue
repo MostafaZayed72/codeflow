@@ -122,7 +122,7 @@ const closeMenu = () => {
               v-for="link in navLinks" 
               :key="link.href"
               :href="link.href" 
-              class="text-3xl font-black text-slate-900 dark:text-white hover:text-primary-600 transition-all active:scale-95"
+              class="text-xl sm:text-3xl font-extrabold text-slate-900 dark:text-white hover:text-primary-600 transition-all active:scale-95 whitespace-nowrap"
               @click="closeMenu"
             >
               {{ t(link.label) }}
@@ -158,9 +158,9 @@ const closeMenu = () => {
               href="https://wa.me/201099658770"
               target="_blank"
               @click="closeMenu(); $trackClick('navbar_whatsapp_mobile')"
-              class="btn-primary w-full justify-center gap-3 py-5 text-xl rounded-2xl shadow-xl shadow-primary-500/20"
+              class="btn-primary w-full justify-center gap-2 py-3 text-base rounded-xl shadow-md shadow-primary-500/15 whitespace-nowrap"
             >
-              <MessageSquare class="w-6 h-6" />
+              <MessageSquare class="w-5 h-5" />
               {{ t('hero.cta') }}
             </a>
           </div>

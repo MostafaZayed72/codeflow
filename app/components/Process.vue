@@ -10,7 +10,7 @@ const steps = computed(() => [
 </script>
 
 <template>
-  <section class="py-24 overflow-hidden fade-in-on-scroll">
+  <section class="py-16 md:py-24 overflow-hidden fade-in-on-scroll">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-16">
         <h2 class="section-title inline-block">{{ t('process.title') }}</h2>
@@ -30,7 +30,7 @@ const steps = computed(() => [
             <div class="w-16 h-16 rounded-full bg-white dark:bg-slate-900 border-4 border-primary-600 flex items-center justify-center text-2xl font-bold text-primary-600 z-10 mb-6 group-hover:bg-primary-600 group-hover:text-white transition-colors duration-500 shadow-xl shadow-primary-500/20">
               {{ step.icon }}
             </div>
-            <h3 class="text-xl font-bold mb-2">{{ step.title }}</h3>
+            <h3 class="text-sm xs:text-base sm:text-lg md:text-xl font-bold mb-2 whitespace-nowrap">{{ step.title }}</h3>
             <p class="text-slate-500 dark:text-slate-400 text-sm">
               {{ step.desc }}
             </p>

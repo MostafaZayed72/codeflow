@@ -1,11 +1,15 @@
 {
-  "pageViews": 11,
-  "whatsappClicks": 0,
+  "pageViews": 14,
+  "whatsappClicks": 1,
   "formSubmissions": 0,
   "pages": {
-    "/": 11
+    "/": 14
   },
   "clicks": {
-    "cta_solutions_bottom": 2
+    "cta_solutions_bottom": 3,
+    "cta_testimonials_bottom": 1,
+    "index_final_whatsapp": 1,
+    "hero_strategy_call": 1,
+    "hero_free_audit": 1
   }
 }

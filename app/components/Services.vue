@@ -55,7 +55,7 @@ const services = computed(() => [
 </script>
 
 <template>
-  <section id="services" class="py-24 bg-slate-50 dark:bg-[#020617] fade-in-on-scroll">
+  <section id="services" class="py-16 md:py-24 bg-slate-50 dark:bg-[#020617] fade-in-on-scroll">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-16">
         <h2 class="section-title inline-block">{{ t('services.title') }}</h2>
@@ -82,7 +82,7 @@ const services = computed(() => [
             <div :class="[service.bg, service.color]" class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 -mt-12 relative z-10 shadow-lg group-hover:scale-110 transition-transform duration-500">
               <component :is="service.icon" class="w-7 h-7" />
             </div>
-            <h3 class="text-2xl font-bold mb-4 group-hover:text-primary-600 transition-colors">{{ service.title }}</h3>
+            <h3 class="text-base xs:text-lg sm:text-xl md:text-2xl font-bold mb-4 group-hover:text-primary-600 transition-colors">{{ service.title }}</h3>
             <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
               {{ service.desc }}
             </p>

@@ -49,7 +49,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="testimonials" class="py-24 bg-slate-50 dark:bg-[#020617] overflow-hidden fade-in-on-scroll">
+  <section id="testimonials" class="py-16 md:py-24 bg-slate-50 dark:bg-[#020617] overflow-hidden fade-in-on-scroll">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center mb-16">
         <h2 class="section-title inline-block mb-4">{{ t('testimonials.title') }}</h2>

@@ -60,7 +60,7 @@ const handleSubmit = async () => {
       </div>
     </Transition>
 
-    <h3 class="text-2xl sm:text-3xl font-black mb-2 text-slate-900 dark:text-white">{{ t('contact_form.title') }}</h3>
+    <h3 class="text-[17px] xs:text-xl sm:text-3xl font-black mb-2 text-slate-900 dark:text-white whitespace-nowrap text-center">{{ t('contact_form.title') }}</h3>
     <p class="text-slate-500 dark:text-slate-400 mb-8">{{ t('contact_form.subtitle') }}</p>
 
     <form @submit.prevent="handleSubmit" class="space-y-6">
@@ -113,12 +113,12 @@ const handleSubmit = async () => {
       <button 
         type="submit"
         :disabled="status === 'loading'"
-        class="btn-primary w-full py-4 sm:py-5 text-lg sm:text-xl font-black rounded-xl sm:rounded-2xl shadow-xl shadow-primary-500/20 flex items-center justify-center gap-3 group"
+        class="btn-primary w-full py-3.5 sm:py-5 text-sm xs:text-base sm:text-xl font-black rounded-xl sm:rounded-2xl shadow-xl shadow-primary-500/20 flex items-center justify-center gap-2.5 group whitespace-nowrap"
       >
-        <span v-if="status === 'loading'" class="w-6 h-6 border-4 border-white/30 border-t-white rounded-full animate-spin"></span>
+        <span v-if="status === 'loading'" class="w-5 h-5 sm:w-6 sm:h-6 border-4 border-white/30 border-t-white rounded-full animate-spin"></span>
         <template v-else>
           {{ t('contact_form.submit') }}
-          <Send class="w-6 h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+          <Send class="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
         </template>
       </button>
 
