@@ -44,7 +44,7 @@ const { t, locale } = useI18n()
       </p>
 
       <!-- CTAs Directly on Section Background -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-6 w-full sm:w-auto animate-fade-in-up [animation-delay:400ms] mb-10 md:mb-20 mt-10 md:mt-12">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6 w-full sm:w-auto animate-fade-in-up [animation-delay:400ms] mb-10 md:mb-20 mt-20 md:mt-12">
         <a
           :href="locale === 'ar' ? 'https://wa.me/201099658770?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20CodeFlow%D8%8C%20%D8%A3%D9%8ود%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%83%D8%A7%D9%84%D9%85%D8%A9%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D9%8A%D8%A9%20%D9%84%D9%85%D9%88%D8%A8%D8%A7%D9%8A%D9%84%D9%8I' : 'https://wa.me/201099658770?text=Hello%20CodeFlow,%20I%20would%20like%20to%20book%20a%20strategy%20call%20for%20my%20project.'"
           target="_blank"
