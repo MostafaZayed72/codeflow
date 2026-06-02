@@ -28,6 +28,12 @@ const handleSubmit = async () => {
 
     if (response.ok) {
       status.value = 'success'
+      try {
+        const nuxtApp = useNuxtApp()
+        nuxtApp.$trackFormSubmit()
+      } catch (e) {
+        console.error('Analytics tracking failed', e)
+      }
       form.name = ''
       form.phone = ''
       form.message = ''

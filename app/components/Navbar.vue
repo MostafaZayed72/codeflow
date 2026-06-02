@@ -69,8 +69,9 @@ const closeMenu = () => {
         </div>
         
         <a
-          href="https://wa.me/201117108646"
+          href="https://wa.me/201099658770"
           target="_blank"
+          @click="$trackClick('navbar_whatsapp_desktop')"
           class="hidden md:flex btn-primary !py-2 !px-5 gap-2 text-sm"
         >
           <MessageSquare class="w-4 h-4" />
@@ -149,14 +150,14 @@ const closeMenu = () => {
               </div>
               <div>
                 <p class="text-sm text-slate-500">{{ t('nav.contact') }}</p>
-                <p class="font-bold text-lg dark:text-white" dir="ltr">+20 111 710 8646</p>
+                <p class="font-bold text-lg dark:text-white" dir="ltr">+20 109 965 8770</p>
               </div>
             </div>
 
             <a
-              href="https://wa.me/201117108646"
+              href="https://wa.me/201099658770"
               target="_blank"
-              @click="closeMenu"
+              @click="closeMenu(); $trackClick('navbar_whatsapp_mobile')"
               class="btn-primary w-full justify-center gap-3 py-5 text-xl rounded-2xl shadow-xl shadow-primary-500/20"
             >
               <MessageSquare class="w-6 h-6" />

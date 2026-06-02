@@ -51,8 +51,9 @@ const { t, locale } = useI18n()
       <!-- CTAs -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-6 w-full sm:w-auto animate-fade-in-up [animation-delay:400ms] mb-24">
         <a
-          :href="locale === 'ar' ? 'https://wa.me/201117108646?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%83%D9%85%20%D9%81%D9%84%D9%88%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%83%D8%A7%D9%84%D9%85%D8%A9%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D9%8A%D8%A9%20%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D9%8A' : 'https://wa.me/201117108646?text=Hello%20CodeFlow,%20I%20would%20like%20to%20book%20a%20strategy%20call%20for%20my%20project.'"
+          :href="locale === 'ar' ? 'https://wa.me/201099658770?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%83%D9%85%20%D9%81%D9%84%D9%88%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%83%D8%A7%D9%84%D9%85%D8%A9%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D9%8A%D8%A9%20%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D9%8A' : 'https://wa.me/201099658770?text=Hello%20CodeFlow,%20I%20would%20like%20to%20book%20a%20strategy%20call%20for%20my%20project.'"
           target="_blank"
+          @click="$trackClick('hero_strategy_call')"
           class="btn-primary w-full sm:w-auto gap-3 text-xl px-10 py-5 shadow-2xl shadow-primary-500/30 group"
         >
           {{ t('hero.cta') }}
@@ -61,8 +62,9 @@ const { t, locale } = useI18n()
         <div class="relative w-full sm:w-auto group">
           <div class="absolute -inset-1 bg-gradient-to-r from-primary-600 to-gold rounded-2xl blur opacity-15 dark:opacity-25 md:opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
           <a
-            :href="locale === 'ar' ? 'https://wa.me/201117108646?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%83%D9%85%20%D9%81%D9%84%D9%88%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%AD%D8%B5%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D8%AA%D8%AD%D9%84%D9%8A%D9%84%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%20%D9%84%D9%85%D9%88%D9%82%D8%B9%D9%8A' : 'https://wa.me/201117108646?text=Hello%20CodeFlow,%20I%20would%20like%20to%20get%20a%20free%20website%20audit.'"
+            :href="locale === 'ar' ? 'https://wa.me/201099658770?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%83%D9%85%20%D9%81%D9%84%D9%88%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%AD%D8%B5%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D8%AA%D8%AD%D9%84%D9%8A%D9%84%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%20%D9%84%D9%85%D9%88%D9%82%D8%B9%D9%8A' : 'https://wa.me/201099658770?text=Hello%20CodeFlow,%20I%20would%20like%20to%20get%20a%20free%20website%20audit.'"
             target="_blank"
+            @click="$trackClick('hero_free_audit')"
             class="relative w-full sm:w-auto text-xl px-10 py-5 bg-white/10 backdrop-blur-sm border-2 border-slate-200 dark:border-white/20 md:border-white/20 hover:border-gold hover:text-gold dark:hover:text-gold hover:bg-slate-800/10 dark:hover:bg-white/5 text-slate-900 dark:text-white md:text-white flex items-center justify-center gap-2 transition-all shadow-xl shadow-black/5 dark:shadow-black/20 md:shadow-black/20 duration-500 rounded-full font-bold"
           >
             {{ t('hero.consultation') }}

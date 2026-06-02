@@ -70,13 +70,14 @@ const localePath = useLocalePath()
                 </div>
                 <div :class="[locale === 'ar' ? 'text-right' : 'text-left']">
                   <p class="text-sm text-primary-300 uppercase tracking-widest font-bold mb-1">{{ t('nav.contact') }}</p>
-                  <p class="text-3xl md:text-4xl font-black tracking-tighter" dir="ltr">+20 111 710 8646</p>
+                  <p class="text-3xl md:text-4xl font-black tracking-tighter" dir="ltr">+20 109 965 8770</p>
                 </div>
               </div>
 
               <a
-                href="https://wa.me/201117108646"
+                href="https://wa.me/201099658770"
                 target="_blank"
+                @click="$trackClick('index_final_whatsapp')"
                 class="inline-flex items-center justify-center px-12 py-6 rounded-3xl bg-white text-primary-900 font-bold text-2xl hover:bg-gold hover:text-white transition-all duration-300 shadow-[0_20px_50px_rgba(255,255,255,0.1)] hover:-translate-y-2 group w-full lg:w-auto"
               >
                 <MessageSquare class="w-8 h-8 mr-4 group-hover:rotate-12 transition-transform" />
