@@ -1,9 +1,10 @@
 {
-  "pageViews": 17,
+  "pageViews": 21,
   "whatsappClicks": 1,
   "formSubmissions": 0,
   "pages": {
-    "/": 17
+    "/": 20,
+    "/en": 1
   },
   "clicks": {
     "cta_solutions_bottom": 3,

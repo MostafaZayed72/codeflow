@@ -14,8 +14,7 @@ const { t, locale } = useI18n()
         playsinline
         class="absolute inset-0 w-full h-full object-cover object-[center_top] md:object-center opacity-100 transition-opacity duration-1000"
       >
-        <source :src="'/hero.webm'" type="video/webm" />
-        <source :src="'/hero.mp4'" type="video/mp4" />
+        <source src="https://res.cloudinary.com/de09liz3w/video/upload/q_auto/f_auto/v1780959446/hero_ldvdbb.webm" type="video/webm" />
       </video>
       
       <!-- Unified Professional Cinematic Dark Filter for ultimate text contrast -->
