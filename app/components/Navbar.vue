@@ -11,11 +11,12 @@ if (import.meta.client) {
 }
 
 const navLinks = [
-  { href: '#services', label: 'nav.services' },
-  { href: '#solutions', label: 'nav.solutions' },
-  { href: '#work', label: 'nav.work' },
-  { href: '#testimonials', label: 'nav.testimonials' },
-  { href: '#contact', label: 'nav.contact' },
+  { href: '/#services', label: 'nav.services' },
+  { href: '/#solutions', label: 'nav.solutions' },
+  { href: '/#work', label: 'nav.work' },
+  { href: '/#testimonials', label: 'nav.testimonials' },
+  { href: '/free-website-audit', label: 'nav.free_audit' },
+  { href: '/#contact', label: 'nav.contact' },
 ]
 
 const toggleMenu = () => {
@@ -36,7 +37,7 @@ const closeMenu = () => {
 <template>
   <nav
     class="fixed top-0 inset-x-0 z-50 transition-all duration-300 px-4 h-20 flex items-center border-b backdrop-blur-md"
-    :class="[isScrolled || isMenuOpen ? 'bg-white/80 dark:bg-slate-900/80 shadow-lg border-slate-200/50 dark:border-slate-800/80' : 'bg-white/40 dark:bg-slate-950/30 border-white/10 dark:border-slate-800/30']"
+    :class="[isScrolled || isMenuOpen ? 'bg-white/80 dark:bg-slate-900/80 shadow-lg border-slate-200/50 dark:border-slate-800/80' : 'bg-white/10 dark:bg-slate-950/30 border-white/10 dark:border-slate-800/30']"
   >
     <div class="max-w-7xl mx-auto w-full flex items-center justify-between">
       <!-- Logo -->
@@ -55,7 +56,12 @@ const closeMenu = () => {
           v-for="link in navLinks" 
           :key="link.href"
           :href="link.href" 
-          class="text-base font-bold hover:text-primary-600 transition-colors"
+          class="text-base font-bold transition-colors"
+          :class="[
+            isScrolled || isMenuOpen 
+              ? 'text-slate-800 hover:text-primary-600 dark:text-slate-200 dark:hover:text-primary-400' 
+              : 'text-white hover:text-primary-300 dark:text-slate-200 dark:hover:text-primary-400'
+          ]"
         >
           {{ t(link.label) }}
         </a>
