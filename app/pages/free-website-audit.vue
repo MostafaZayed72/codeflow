@@ -11,7 +11,7 @@
 
       <div class="container mx-auto px-4 relative z-10">
         <div class="max-w-4xl mx-auto text-center space-y-8">
-          <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300 drop-shadow-sm">
+          <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300 drop-shadow-sm pb-4 leading-normal">
             اكتشف مشاكل موقعك خلال 30 ثانية
           </h1>
           <p class="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
@@ -21,24 +21,30 @@
           <!-- Form inside Hero -->
           <div class="mt-10 max-w-2xl mx-auto bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl p-8 rounded-3xl shadow-2xl border border-slate-200/50 dark:border-slate-800/50 relative">
             <form @submit.prevent="submitForm" class="flex flex-col gap-5">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div class="space-y-1 text-right">
-                  <label for="websiteName" class="text-sm font-semibold text-slate-700 dark:text-slate-300">اسم الموقع</label>
-                  <input type="text" id="websiteName" v-model="form.name" required placeholder="مثال: متجر كود فلو" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-blue-500 outline-none transition-all placeholder:text-slate-400" />
-                </div>
-                <div class="space-y-1 text-right">
-                  <label for="websiteUrl" class="text-sm font-semibold text-slate-700 dark:text-slate-300">رابط الموقع</label>
-                  <input type="url" id="websiteUrl" v-model="form.url" required placeholder="https://example.com" dir="ltr" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-blue-500 outline-none transition-all text-left placeholder:text-slate-400" />
-                </div>
-              </div>
               <div class="space-y-1 text-right">
-                <label for="email" class="text-sm font-semibold text-slate-700 dark:text-slate-300">البريد الإلكتروني</label>
-                <input type="email" id="email" v-model="form.email" required placeholder="name@example.com" dir="ltr" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-blue-500 outline-none transition-all text-left placeholder:text-slate-400" />
+                <label for="websiteUrl" class="text-sm font-semibold text-slate-700 dark:text-slate-300">رابط الموقع</label>
+                <input type="url" id="websiteUrl" v-model="form.url" required placeholder="https://example.com" dir="ltr" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-blue-500 outline-none transition-all text-left placeholder:text-slate-400" :disabled="isLoading" />
               </div>
-              <button type="submit" class="mt-4 w-full py-4 px-8 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-bold text-lg rounded-xl shadow-[0_4px_20px_rgba(37,99,235,0.3)] hover:shadow-[0_8px_30px_rgba(37,99,235,0.4)] transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2 group">
-                احصل على التقرير المجاني
-                <ArrowLeft class="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+              <button type="submit" :disabled="isLoading" class="mt-4 w-full py-4 px-8 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-bold text-lg rounded-xl shadow-[0_4px_20px_rgba(37,99,235,0.3)] hover:shadow-[0_8px_30px_rgba(37,99,235,0.4)] transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2 group disabled:opacity-70 disabled:hover:translate-y-0 disabled:cursor-not-allowed">
+                <span v-if="isLoading" class="flex items-center gap-2">
+                  <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  جاري فحص الموقع...
+                </span>
+                <span v-else class="flex items-center gap-2">
+                  احصل على التقرير المجاني
+                  <ArrowLeft class="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+                </span>
               </button>
+              
+              <div v-if="errorMessage" class="mt-4 p-4 bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/20 rounded-xl text-red-600 dark:text-red-400 text-sm font-semibold flex items-start gap-3 animate-pulse">
+                <svg class="w-5 h-5 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                <span>{{ errorMessage }}</span>
+              </div>
             </form>
           </div>
         </div>
@@ -110,57 +116,7 @@
       </div>
     </section>
 
-    <!-- Typical Results (Dashboard Mockup) -->
-    <section class="py-24 bg-slate-950 text-white overflow-hidden relative">
-      <!-- Glow effects -->
-      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-64 bg-blue-600/20 blur-[100px] pointer-events-none rounded-full"></div>
-      
-      <div class="container mx-auto px-4 text-center relative z-10">
-        <h2 class="text-3xl md:text-5xl font-bold mb-6">نتائج دقيقة ومباشرة</h2>
-        <p class="text-lg text-slate-400 mb-16 max-w-2xl mx-auto">ستحصل على تحليل شامل يعرض أرقاماً واضحة لأداء موقعك مع توصيات برمجية قابلة للتنفيذ الفوري.</p>
 
-        <div class="max-w-5xl mx-auto bg-slate-900/80 backdrop-blur-xl border border-slate-800 rounded-3xl p-8 shadow-2xl relative overflow-hidden group">
-          <!-- Glassmorphism shine -->
-          <div class="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/5 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-          
-          <!-- Fake window controls -->
-          <div class="flex gap-2 mb-10" dir="ltr">
-            <div class="w-3.5 h-3.5 rounded-full bg-red-500/80 border border-red-500"></div>
-            <div class="w-3.5 h-3.5 rounded-full bg-yellow-500/80 border border-yellow-500"></div>
-            <div class="w-3.5 h-3.5 rounded-full bg-green-500/80 border border-green-500"></div>
-          </div>
-          
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div v-for="(metric, index) in metrics" :key="metric.name" class="flex flex-col items-center justify-center p-6 rounded-2xl bg-slate-800/40 border border-slate-700/50 hover:bg-slate-800/60 transition-colors">
-              <div class="relative w-32 h-32 mb-6">
-                <!-- Outer glow -->
-                <div class="absolute inset-0 bg-green-500/20 blur-xl rounded-full" v-if="metric.score >= 90"></div>
-                <div class="absolute inset-0 bg-yellow-500/20 blur-xl rounded-full" v-else-if="metric.score >= 70"></div>
-                
-                <svg class="w-full h-full transform -rotate-90 relative z-10" viewBox="0 0 100 100">
-                  <circle cx="50" cy="50" r="40" fill="transparent" class="stroke-slate-800" stroke-width="8" />
-                  <circle 
-                    cx="50" cy="50" r="40" 
-                    fill="transparent" 
-                    :class="metric.color" 
-                    stroke-width="8" 
-                    stroke-linecap="round" 
-                    :stroke-dasharray="251.2" 
-                    :stroke-dashoffset="251.2 - (251.2 * metric.score) / 100" 
-                    class="transition-all duration-1500 ease-out drop-shadow-md" 
-                    :style="`transition-delay: ${index * 200}ms`"
-                  />
-                </svg>
-                <div class="absolute inset-0 flex flex-col items-center justify-center z-20">
-                  <span class="text-3xl font-bold">{{ metric.score }}</span>
-                </div>
-              </div>
-              <h4 class="text-lg font-bold text-slate-300 tracking-wide">{{ metric.name }}</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Trust / Portfolio Section -->
     <section class="py-24 bg-slate-50 dark:bg-slate-950">
@@ -282,16 +238,34 @@ useHead({
 })
 
 const form = ref({
-  name: '',
-  url: '',
-  email: ''
+  url: ''
 })
 
-const submitForm = () => {
-  // Logic to handle form submission
-  console.log('Form Submitted:', form.value)
-  // Show success state or redirect
-  alert('تم استلام طلبك بنجاح! سنتواصل معك قريباً.')
+const isLoading = ref(false)
+const errorMessage = ref('')
+
+const submitForm = async () => {
+  if (!form.value.url) return
+  
+  errorMessage.value = ''
+  let targetUrl = form.value.url
+  if (!targetUrl.startsWith('http')) {
+    targetUrl = 'https://' + targetUrl
+  }
+
+  isLoading.value = true
+
+  try {
+    // Redirect to the report page with the URL as a query parameter
+    await navigateTo({
+      path: '/audit-report',
+      query: { url: targetUrl }
+    })
+  } catch (error) {
+    errorMessage.value = 'حدث خطأ أثناء الانتقال للتقرير.'
+  } finally {
+    isLoading.value = false
+  }
 }
 
 const problems = [
@@ -316,12 +290,6 @@ const steps = [
   'نتواصل معك عند الحاجة'
 ]
 
-const metrics = [
-  { name: 'Performance', score: 88, color: 'stroke-yellow-500' },
-  { name: 'Accessibility', score: 95, color: 'stroke-green-500' },
-  { name: 'Best Practices', score: 100, color: 'stroke-green-500' },
-  { name: 'SEO', score: 92, color: 'stroke-green-500' }
-]
 
 const testimonials = [
   "Mostafa is an absolute beast when it comes to speed and execution.",

@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { MessageSquare, Menu, X, Phone } from 'lucide-vue-next'
 const { t, locale } = useI18n()
+const route = useRoute()
+const isDarkHero = computed(() => route.path === '/' || route.path === '/en')
+
 const isScrolled = ref(false)
 const isMenuOpen = ref(false)
 
@@ -37,7 +40,7 @@ const closeMenu = () => {
 <template>
   <nav
     class="fixed top-0 inset-x-0 z-50 transition-all duration-300 px-4 h-20 flex items-center border-b backdrop-blur-md"
-    :class="[isScrolled || isMenuOpen ? 'bg-white/80 dark:bg-slate-900/80 shadow-lg border-slate-200/50 dark:border-slate-800/80' : 'bg-white/10 dark:bg-slate-950/30 border-white/10 dark:border-slate-800/30']"
+    :class="[isScrolled || isMenuOpen || !isDarkHero ? 'bg-white/80 dark:bg-slate-900/80 shadow-lg border-slate-200/50 dark:border-slate-800/80' : 'bg-white/10 dark:bg-slate-950/30 border-white/10 dark:border-slate-800/30']"
   >
     <div class="max-w-7xl mx-auto w-full flex items-center justify-between">
       <!-- Logo -->
@@ -58,7 +61,7 @@ const closeMenu = () => {
           :href="link.href" 
           class="text-base font-bold transition-colors"
           :class="[
-            isScrolled || isMenuOpen 
+            isScrolled || isMenuOpen || !isDarkHero
               ? 'text-slate-800 hover:text-primary-600 dark:text-slate-200 dark:hover:text-primary-400' 
               : 'text-white hover:text-primary-300 dark:text-slate-200 dark:hover:text-primary-400'
           ]"
@@ -87,7 +90,12 @@ const closeMenu = () => {
         <!-- Burger Toggle -->
         <button 
           @click="toggleMenu"
-          class="lg:hidden p-2.5 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition-all z-[70]"
+          class="lg:hidden p-2.5 rounded-xl transition-all z-[70]"
+          :class="[
+            isScrolled || isMenuOpen || !isDarkHero
+              ? 'text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800'
+              : 'text-white hover:bg-white/10 dark:text-slate-200 dark:hover:bg-slate-800'
+          ]"
         >
           <Menu class="w-7 h-7" />
         </button>
