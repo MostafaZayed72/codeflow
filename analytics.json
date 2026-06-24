@@ -1,12 +1,12 @@
 {
-  "pageViews": 60,
+  "pageViews": 74,
   "whatsappClicks": 2,
   "formSubmissions": 1,
   "pages": {
-    "/": 38,
+    "/": 39,
     "/en": 3,
-    "/free-website-audit": 11,
-    "/audit-report": 8
+    "/free-website-audit": 17,
+    "/audit-report": 15
   },
   "clicks": {
     "cta_solutions_bottom": 3,
