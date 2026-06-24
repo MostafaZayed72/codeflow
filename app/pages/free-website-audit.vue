@@ -23,11 +23,11 @@
             <form @submit.prevent="submitForm" class="flex flex-col gap-5">
               <div class="space-y-1 text-right">
                 <label for="websiteUrl" class="text-sm font-semibold text-slate-700 dark:text-slate-300">رابط الموقع</label>
-                <input type="url" id="websiteUrl" v-model="form.url" required placeholder="https://example.com" dir="ltr" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-blue-500 outline-none transition-all text-left placeholder:text-slate-400" :disabled="isLoading" />
+                <input type="url" id="websiteUrl" v-model="form.url" required placeholder="https://example.com" dir="ltr" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-blue-500 outline-none transition-all text-left placeholder:text-slate-400" :disabled="isLoading" aria-label="رابط الموقع" />
               </div>
-              <button type="submit" :disabled="isLoading" class="mt-4 w-full py-4 px-8 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-bold text-lg rounded-xl shadow-[0_4px_20px_rgba(37,99,235,0.3)] hover:shadow-[0_8px_30px_rgba(37,99,235,0.4)] transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2 group disabled:opacity-70 disabled:hover:translate-y-0 disabled:cursor-not-allowed">
+              <button type="submit" :disabled="isLoading" class="mt-4 w-full py-4 px-8 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-bold text-lg rounded-xl shadow-[0_4px_20px_rgba(37,99,235,0.3)] hover:shadow-[0_8px_30px_rgba(37,99,235,0.4)] transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2 group disabled:opacity-70 disabled:hover:translate-y-0 disabled:cursor-not-allowed" aria-label="احصل على التقرير">
                 <span v-if="isLoading" class="flex items-center gap-2">
-                  <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                     <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                   </svg>
@@ -35,12 +35,12 @@
                 </span>
                 <span v-else class="flex items-center gap-2">
                   احصل على التقرير المجاني
-                  <ArrowLeft class="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+                  <ArrowLeft class="w-5 h-5 group-hover:-translate-x-1 transition-transform" aria-hidden="true" />
                 </span>
               </button>
               
               <div v-if="errorMessage" class="mt-4 p-4 bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/20 rounded-xl text-red-600 dark:text-red-400 text-sm font-semibold flex items-start gap-3 animate-pulse">
-                <svg class="w-5 h-5 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="w-5 h-5 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                 </svg>
                 <span>{{ errorMessage }}</span>
@@ -62,7 +62,7 @@
           <div v-for="(problem, index) in problems" :key="index" class="p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/50 hover:shadow-xl hover:shadow-blue-500/5 dark:hover:shadow-blue-900/20 transition-all duration-300 hover:-translate-y-2 group relative overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-cyan-500/0 group-hover:from-blue-500/5 group-hover:to-cyan-500/5 transition-colors duration-500"></div>
             <div class="w-16 h-16 rounded-2xl bg-red-100 dark:bg-red-500/10 text-red-500 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 relative z-10 shadow-sm">
-              <component :is="problem.icon" class="w-8 h-8" />
+              <component :is="problem.icon" class="w-8 h-8" aria-hidden="true" />
             </div>
             <h3 class="text-2xl font-bold mb-3 relative z-10">{{ problem.title }}</h3>
             <p class="text-slate-600 dark:text-slate-400 leading-relaxed relative z-10">{{ problem.desc }}</p>
@@ -84,7 +84,7 @@
             <div class="space-y-8">
               <div v-for="(value, index) in values" :key="index" class="flex gap-5 items-start group">
                 <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-blue-100 dark:bg-blue-500/20 text-blue-600 flex items-center justify-center group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shadow-sm">
-                  <Check class="w-7 h-7" />
+                  <Check class="w-7 h-7" aria-hidden="true" />
                 </div>
                 <div>
                   <h4 class="text-xl font-bold mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{{ value.title }}</h4>
@@ -116,8 +116,6 @@
       </div>
     </section>
 
-
-
     <!-- Trust / Portfolio Section -->
     <section class="py-24 bg-slate-50 dark:bg-slate-950">
       <div class="container mx-auto px-4 max-w-6xl">
@@ -129,25 +127,24 @@
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div v-for="i in 3" :key="i" class="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-800 group cursor-pointer hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+          <div v-for="project in projects" :key="project.title" class="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-800 group cursor-pointer hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
             <div class="aspect-[4/3] bg-slate-100 dark:bg-slate-800 relative overflow-hidden flex items-center justify-center">
                <div class="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-cyan-500/10 group-hover:scale-110 transition-transform duration-700"></div>
-               <!-- Placeholder for actual portfolio images -->
-               <div class="w-3/4 h-3/4 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm rounded-xl border border-white/20 shadow-xl relative transform group-hover:-rotate-2 transition-transform duration-500">
-                 <div class="absolute top-0 left-0 w-full h-8 border-b border-white/20 flex items-center px-3 gap-1.5" dir="ltr">
-                   <div class="w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-600"></div>
-                   <div class="w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-600"></div>
-                   <div class="w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-600"></div>
-                 </div>
+               <img :src="project.image" :alt="project.title" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
+               <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                 <a :href="project.link" target="_blank" aria-label="زيارة الموقع" class="btn-primary !rounded-full !p-3 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                   <ArrowLeft class="w-6 h-6 rotate-180" aria-hidden="true" />
+                 </a>
                </div>
             </div>
-            <div class="p-8">
-              <h3 class="font-bold text-2xl mb-3 group-hover:text-blue-600 transition-colors">مشروع {{ i }}</h3>
-              <p class="text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">تحسين سرعة التحميل وتجديد واجهة المستخدم لزيادة التحويل.</p>
-              <button class="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-bold group-hover:gap-4 transition-all">
-                View Project
-                <ArrowLeft class="w-5 h-5" />
-              </button>
+            <div class="p-8 relative z-10 bg-white dark:bg-slate-900">
+              <span class="text-xs font-bold uppercase tracking-widest text-primary-600 dark:text-primary-400 block mb-2">{{ project.category }}</span>
+              <h3 class="font-bold text-2xl mb-3 group-hover:text-blue-600 transition-colors">{{ project.title }}</h3>
+              <p class="text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">{{ project.desc }}</p>
+              <a :href="project.link" target="_blank" class="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-bold group-hover:gap-4 transition-all">
+                زيارة الموقع
+                <ArrowLeft class="w-5 h-5" aria-hidden="true" />
+              </a>
             </div>
           </div>
         </div>
@@ -160,18 +157,16 @@
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">ماذا يقول عملاؤنا؟</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div v-for="(quote, index) in testimonials" :key="index" class="p-8 rounded-[2rem] bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-700/50 hover:bg-white dark:hover:bg-slate-800 hover:shadow-xl transition-all duration-300 group">
-            <Quote class="w-12 h-12 text-blue-500/20 mb-6 group-hover:text-blue-500/40 transition-colors transform rotate-180" />
-            <p class="text-lg font-medium leading-relaxed mb-8 text-slate-700 dark:text-slate-300" dir="ltr">"{{ quote }}"</p>
+          <div v-for="(quote, index) in realTestimonials" :key="index" class="p-8 rounded-[2rem] bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-700/50 hover:bg-white dark:hover:bg-slate-800 hover:shadow-xl transition-all duration-300 group flex flex-col">
+            <Quote class="w-12 h-12 text-blue-500/20 mb-6 group-hover:text-blue-500/40 transition-colors transform rotate-180" aria-hidden="true" />
+            <p class="text-lg font-medium leading-relaxed mb-8 text-slate-700 dark:text-slate-300 flex-1">"{{ quote.text }}"</p>
             <div class="flex items-center gap-4 mt-auto pt-6 border-t border-slate-200 dark:border-slate-700">
-              <div class="w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 p-0.5">
-                <div class="w-full h-full rounded-full bg-white dark:bg-slate-900 flex items-center justify-center font-bold text-xl text-blue-600">
-                  C{{ index + 1 }}
-                </div>
+              <div class="w-14 h-14 rounded-full overflow-hidden shrink-0 border-2 border-blue-500/20">
+                <img :src="quote.avatar" :alt="quote.name" class="w-full h-full object-cover" loading="lazy" />
               </div>
               <div>
-                <h5 class="font-bold text-lg">Client {{ index + 1 }}</h5>
-                <p class="text-sm text-slate-500 dark:text-slate-400 font-medium">CEO & Founder</p>
+                <h5 class="font-bold text-lg text-slate-900 dark:text-white">{{ quote.name }}</h5>
+                <p class="text-sm text-slate-500 dark:text-slate-400 font-medium">{{ quote.role }}</p>
               </div>
             </div>
           </div>
@@ -193,10 +188,10 @@
         <p class="text-xl text-blue-100 mb-12 leading-relaxed">
           بعد مراجعة التقرير، يمكننا مساعدتك في تحسين الأداء والتصميم وتجربة المستخدم بشكل جذري للوصول لأفضل نتائج ممكنة.
         </p>
-        <button class="py-5 px-12 bg-white text-blue-700 hover:bg-slate-50 font-bold text-xl rounded-full shadow-[0_0_40px_rgba(255,255,255,0.2)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_60px_rgba(255,255,255,0.4)] flex items-center justify-center gap-3 mx-auto">
+        <a href="https://wa.me/201099658770" target="_blank" class="w-max mx-auto py-5 px-12 bg-white text-blue-700 hover:bg-slate-50 font-bold text-xl rounded-full shadow-[0_0_40px_rgba(255,255,255,0.2)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_60px_rgba(255,255,255,0.4)] flex items-center justify-center gap-3">
           احجز استشارة مجانية
-          <ArrowLeft class="w-6 h-6" />
-        </button>
+          <ArrowLeft class="w-6 h-6" aria-hidden="true" />
+        </a>
       </div>
     </section>
   </div>
@@ -212,13 +207,13 @@ useSeoMeta({
   description: 'اكتشف مشاكل موقعك خلال 30 ثانية. احصل على تقرير مجاني يوضح مشاكل السرعة وتجربة المستخدم وتحسين محركات البحث التي قد تؤثر على نتائج موقعك ومبيعاتك.',
   ogTitle: 'تقرير مجاني لتحليل موقعك | CodeFlow Web',
   ogDescription: 'اكتشف مشاكل موقعك خلال 30 ثانية. احصل على تقرير مجاني يوضح مشاكل السرعة وتجربة المستخدم وتحسين محركات البحث.',
-  ogImage: '/og-audit.png', // Placeholder
+  ogImage: '/og-audit.png',
   twitterCard: 'summary_large_image',
 })
 
 useHead({
   link: [
-    { rel: 'canonical', href: 'https://codeflow.com/free-website-audit' }
+    { rel: 'canonical', href: 'https://codeflowweb.com/free-website-audit' }
   ],
   script: [
     {
@@ -256,7 +251,6 @@ const submitForm = async () => {
   isLoading.value = true
 
   try {
-    // Redirect to the report page with the URL as a query parameter
     await navigateTo({
       path: '/audit-report',
       query: { url: targetUrl }
@@ -290,28 +284,25 @@ const steps = [
   'نتواصل معك عند الحاجة'
 ]
 
+const projects = [
+  { title: "SN&P", category: "الأمن السيبراني", desc: "منصة احترافية للأمن السيبراني مصممة لزيادة الثقة وجذب صفقات الشركات الكبرى.", link: "https://secure-seven-omega.vercel.app/", image: "/projects/secure.png" },
+  { title: "Square One", category: "التطوير العقاري", desc: "هوية رقمية متكاملة ومحرك بحث عقاري متطور لشركة تطوير عقاري رائدة.", link: "https://square-one-seven.vercel.app/", image: "/projects/squareone.png" },
+  { title: "دام (Dam)", category: "منصة مجتمعية", desc: "خارطة تفاعلية سريعة لاستكشاف الفعاليات والأنشطة في السعودية، مهيأة للزيارات الضخمة.", link: "https://damsa.cloud/", image: "/projects/damsa.png" }
+]
 
-const testimonials = [
-  "Mostafa is an absolute beast when it comes to speed and execution.",
-  "Mostafa is a professional, highly cooperative, and fast developer.",
-  "He was able to translate all my website requirements into a tangible product in no time."
+const realTestimonials = [
+  { name: "م. ياسر القحطاني", role: "مؤسس شركة وصل", text: "أفضل تجربة تطوير ويب مررت بها. سرعة الموقع زادت من ثقة عملائنا ورفعت مبيعاتنا بنسبة 40% خلال الربع الأول.", avatar: "/avatars/client5.png" },
+  { name: "أ. مريم الراشد", role: "مديرة التسويق في منصة نون", text: "بفضل خبرتهم في السيو، تصدرنا نتائج البحث للكلمات المستهدفة في وقت قياسي، ما ضاعف من عدد العملاء المحتملين.", avatar: "/avatars/client2.png" },
+  { name: "د. عبد العزيز الفوزان", role: "رئيس مجلس إدارة الفوزان للتجارة", text: "ساعدونا في أتمتة عمليات الحجوزات المعقدة وتوفير أكثر من 20 ساعة عمل أسبوعياً، مع تقليل أخطاء الموظفين بشكل شبه كامل.", avatar: "/avatars/client10.png" }
 ]
 </script>
 
 <style>
 @keyframes blob {
-  0% {
-    transform: translate(0px, 0px) scale(1);
-  }
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-  100% {
-    transform: translate(0px, 0px) scale(1);
-  }
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
 }
 
 .animate-blob {

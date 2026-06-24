@@ -17,7 +17,7 @@ const navLinks = [
   { href: '/#services', label: 'nav.services' },
   { href: '/#solutions', label: 'nav.solutions' },
   { href: '/#work', label: 'nav.work' },
-  { href: '/#testimonials', label: 'nav.testimonials' },
+  { href: '/#pricing', label: 'nav.pricing' },
   { href: '/free-website-audit', label: 'nav.free_audit' },
   { href: '/#contact', label: 'nav.contact' },
 ]

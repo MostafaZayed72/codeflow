@@ -47,11 +47,12 @@ const { t, locale } = useI18n()
         <a
           :href="locale === 'ar' ? 'https://wa.me/201099658770?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20CodeFlow%D8%8C%20%D8%A3%D9%8ود%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%83%D8%A7%D9%84%D9%85%D8%A9%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D9%8A%D8%A9%20%D9%84%D9%85%D9%88%D8%A8%D8%A7%D9%8A%D9%84%D9%8I' : 'https://wa.me/201099658770?text=Hello%20CodeFlow,%20I%20would%20like%20to%20book%20a%20strategy%20call%20for%20my%20project.'"
           target="_blank"
+          aria-label="Book a strategy call on WhatsApp"
           @click="$trackClick('hero_strategy_call')"
           class="btn-primary w-full sm:w-auto gap-2 text-sm sm:text-xl px-6 sm:px-10 py-4 sm:py-5 shadow-2xl shadow-primary-500/30 group whitespace-nowrap"
         >
           {{ t('hero.cta') }}
-          <ArrowRight class="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" :class="[locale === 'ar' ? 'rotate-180 group-hover:-translate-x-1' : '']" />
+          <ArrowRight class="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" :class="[locale === 'ar' ? 'rotate-180 group-hover:-translate-x-1' : '']" aria-hidden="true" />
         </a>
         <div class="relative w-full sm:w-auto group">
           <div class="absolute -inset-1 bg-gradient-to-r from-primary-600 to-gold rounded-2xl blur opacity-15 dark:opacity-25 md:opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
