@@ -97,6 +97,10 @@ const localePath = useLocalePath()
 
     <Work />
     
+    <Pricing />
+    
+    <FAQ />
+    
     <!-- Final CTA Section -->
     <section id="contact" class="py-16 md:py-24 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white border-t border-slate-200 dark:border-slate-800/50 relative overflow-hidden fade-in-on-scroll">
       <div class="absolute inset-0 opacity-10 pointer-events-none">

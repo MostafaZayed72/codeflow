@@ -4,7 +4,7 @@ const { t, locale } = useI18n()
 
 const testimonialList = computed(() => {
   const items = []
-  for (let i = 1; i <= 12; i++) {
+  for (let i = 1; i <= 3; i++) {
     const key = `testimonials.client${i}`
     items.push({
       name: t(`${key}.name`),

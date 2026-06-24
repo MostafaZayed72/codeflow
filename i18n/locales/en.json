@@ -11,140 +11,83 @@
     "light_mode": "Light",
     "dark_mode": "Dark"
   },
-  "techstack": {
-    "title": "Modern technologies we rely on to ensure your project's performance"
-  },
   "hero": {
     "badge": "Premium Web Development Agency",
-    "title": "We Build Digital Platforms That Turn Visitors Into",
-    "subtitle": "Paying Clients & Revenue",
-    "description": "High-performance web design and development, built for ambitious projects and businesses looking to scale their digital presence and sales.",
-    "cta": "Discuss Your Project",
-    "consultation": "Request a Project Quote"
+    "title": "We Build Websites That Multiply",
+    "subtitle": "Your Sales & Revenue",
+    "description": "Your site loads in under a second to ensure customers don't bounce. Custom web development and UX/UI designed to convert.",
+    "cta": "Book Your Free Strategy Call",
+    "consultation": "Request a Free Site Audit"
   },
   "services": {
     "title": "Specialized Solutions for Growth",
     "design": {
       "title": "High-Converting UX/UI Design",
-      "desc": "Bespoke, stunning web interfaces designed with buyer psychology to guide visitors directly into your sales funnel."
+      "desc": "Bespoke interfaces designed with buyer psychology to guide visitors directly into your sales funnel."
     },
     "development": {
       "title": "High-Performance Web Development",
-      "desc": "Lightning-fast, clean-coded websites built using modern frameworks to ensure peak performance, stability, and speed."
+      "desc": "Lightning-fast, clean-coded websites to ensure peak performance and stability."
     },
     "redesign": {
       "title": "Conversion-Focused Redesigns",
-      "desc": "Transform your outdated website into a modern, high-performing lead generation engine that outranks your competitors."
+      "desc": "Transform your slow website into a modern lead generation engine."
     },
     "wordpress": {
       "title": "Enterprise WordPress Development",
-      "desc": "Scalable, secure, and editor-friendly WordPress sites built with custom themes, giving your marketing team full control."
+      "desc": "Scalable WordPress sites built with custom themes, giving you full control."
     },
     "framer": {
       "title": "Framer Websites for Startups",
-      "desc": "Stunning, animated marketing pages built and launched rapidly in Framer to validate ideas and capture leads fast."
+      "desc": "Stunning marketing pages launched rapidly to validate ideas and capture leads."
     },
     "custom": {
       "title": "Custom Web Applications",
-      "desc": "Bespoke internal systems, customer portals, and database integrations built to streamline operations and cut costs."
+      "desc": "Bespoke internal systems and integrations built to streamline operations."
     }
   },
   "features": {
-    "speed": { "title": "Bazinga Speed", "desc": "Lightning-fast performance for modern web users." },
-    "security": { "title": "Ironclad Security", "desc": "Enterprise-grade security built into every line of code." },
-    "seo": { "title": "SEO Ready", "desc": "Optimized for search engines to drive organic growth." }
+    "speed": { "title": "Sub-Second Load", "desc": "Keep customers engaged with blazing fast performance." },
+    "security": { "title": "Data Protection", "desc": "Enterprise-grade security to protect your business and clients." },
+    "seo": { "title": "Google Page 1 Ready", "desc": "Technical structure optimized for organic search dominance." }
   },
   "process": {
     "title": "Our Transparent Process",
-    "step1": "1. Strategy & Wireframing",
+    "step1": "1. Strategy & Planning",
     "step2": "2. High-Fidelity UI Design",
     "step3": "3. Speed-First Coding",
     "step4": "4. Launch & Optimization"
   },
   "work": {
-    "title": "Real Solutions, Real Business Results",
+    "title": "Real Solutions, Real Results",
     "view_project": "View Live Site",
     "project1": { "title": "SN&P", "category": "Cybersecurity", "desc": "Enterprise-grade threat protection platform designed for high security and buyer trust." },
-    "project2": { "title": "Square One", "category": "Real Estate", "desc": "High-performance digital identity and property listing engine for a major developer." },
-    "project3": { "title": "Dam (دام)", "category": "Community Platform", "desc": "Interactive geolocated map discovering local Saudi events, built for massive traffic." },
+    "project2": { "title": "Square One", "category": "Real Estate", "desc": "High-performance digital identity and property listing engine for a developer." },
+    "project3": { "title": "Dam", "category": "Community Platform", "desc": "Interactive geolocated map discovering local Saudi events, built for massive traffic." },
     "project4": { "title": "Zabots", "category": "AI Automation", "desc": "Smart lead capturing system automating conversations into booked sales calls." },
     "project7": { "title": "Tqdr System", "category": "Fintech Platform", "desc": "Frictionless installment checkout flow and customer management dashboard." },
-    "project9": { "title": "Happy Paws", "category": "E-Commerce", "desc": "Modern pet e-commerce platform optimized for high average order value and fast checkout." },
+    "project9": { "title": "Happy Paws", "category": "E-Commerce", "desc": "Modern pet e-commerce platform optimized for high average order value." },
     "project10": { "title": "MoveIt", "category": "Logistics & Moving", "desc": "On-demand relocation platform with interactive instant quote pricing calculators." }
   },
   "testimonials": {
-    "title": "What Our Clients Say About Us",
+    "title": "Real Results from Partners",
     "client1": { 
-      "name": "Dr. Ibrahim Al-Suwaidi", 
-      "role": "CEO of Al-Qamma Holding", 
-      "text": "Working with CodeFlow was a turning point for our digital project. Their punctuality and code quality exceeded our expectations.",
-      "image": "/avatars/client1.png"
+      "name": "Eng. Yasser Al-Qahtani", 
+      "role": "Founder of Wasl Co.", 
+      "text": "The best web development experience I've had. The blazing speed boosted our customers' trust and increased sales by 40% in Q1.",
+      "image": "/avatars/client5.png"
     },
     "client2": { 
       "name": "Ms. Maryam Al-Rashed", 
       "role": "Marketing Director at Noon", 
-      "text": "Thanks to their SEO expertise, we ranked on the first page in record time. A very professional team in solving technical problems.",
+      "text": "Thanks to their technical SEO expertise, we dominated target keywords in record time, doubling our inbound leads.",
       "image": "/avatars/client2.png"
     },
     "client3": { 
-      "name": "Eng. Omar Al-Otaibi", 
-      "role": "Founder of Tomorrow Solutions", 
-      "text": "The system they built made operations management seamless and saved our staff a lot of time and effort.",
-      "image": "/avatars/client3.png"
-    },
-    "client4": { 
-      "name": "Ms. Layla Al-Sharif", 
-      "role": "Operations Director at Emaar Properties", 
-      "text": "A creative and technically proficient team. They turned our complex idea into a reality with the highest international standards.",
-      "image": "/avatars/client4.png"
-    },
-    "client5": { 
-      "name": "Eng. Yasser Al-Qahtani", 
-      "role": "Founder of Wasl Co.", 
-      "text": "The best web development experience I've had. The site is very fast and user-friendly, which boosted our customers' trust and sales.",
-      "image": "/avatars/client5.png"
-    },
-    "client6": { 
-      "name": "Dr. Noura Al-Mansouri", 
-      "role": "Director of Ofuq Medical Center", 
-      "text": "Full commitment to deadlines and continuous technical support. The medical system they developed changed our booking management concept.",
-      "image": "/avatars/client6.png"
-    },
-    "client7": { 
-      "name": "Mr. Khalid Al-Harbi", 
-      "role": "General Manager at Binaa Capital", 
-      "text": "Professional execution and a deep understanding of the Saudi market requirements. The results were impressive by all measures.",
-      "image": "/avatars/client7.png"
-    },
-    "client8": { 
-      "name": "Eng. Faisal bin Zaid", 
-      "role": "Founder of Techno Platform", 
-      "text": "A young and ambitious team, they have an immense ability to understand startup needs and turn them into digital products.",
-      "image": "/avatars/client8.png"
-    },
-    "client9": { 
-      "name": "Ms. Sarah Al-Ghamdi", 
-      "role": "Creative Director at Fadaa Co.", 
-      "text": "The aesthetic touch in design combined with superior performance made our site stand out from all competitors.",
-      "image": "/avatars/client9.png"
-    },
-    "client10": { 
       "name": "Dr. Abdulaziz Al-Fouzan", 
       "role": "Chairman of Al-Fouzan Trading", 
-      "text": "Extensive experience in digital transformation. They helped us automate all our operations with unparalleled success.",
+      "text": "They helped us automate complex booking operations, saving over 20 hours of staff time weekly and nearly eliminating errors.",
       "image": "/avatars/client10.png"
-    },
-    "client11": { 
-      "name": "Ms. Munira Al-Saeed", 
-      "role": "HR Manager - Jisr Co.", 
-      "text": "The HR system they developed simplified many of our complex routine tasks significantly.",
-      "image": "/avatars/client11.png"
-    },
-    "client12": { 
-      "name": "Eng. Adel Al-Shammari", 
-      "role": "Founder of Wasalni App", 
-      "text": "Superior performance and precise execution. The CodeFlow team is the ideal technical partner for any successful project.",
-      "image": "/avatars/client12.png"
     }
   },
   "solutions": {
@@ -156,67 +99,95 @@
     "case1": {
       "title": "Turning Sluggishness into Sales",
       "problem": "An e-commerce store losing 70% of visitors due to a 5-second page load time.",
-      "solution": "Rebuilt using Nuxt 3, optimized imagery, and set up advanced edge caching.",
+      "solution": "Rebuilt using Nuxt 3 and optimized edge caching.",
       "impact": "Page speed reduced to 0.8s, resulting in a 45% increase in sales."
     },
     "case2": {
       "title": "Dominating Search Results",
-      "problem": "A premium real estate developer invisible on the first page of Google KSA.",
-      "solution": "Conducted a complete technical SEO audit and restructured property content layout.",
-      "impact": "Ranked #1 for 15 primary keywords, driving a 300% growth in qualified leads."
+      "problem": "A real estate developer invisible on the first page of Google KSA.",
+      "solution": "Conducted a complete technical SEO audit and restructured layout.",
+      "impact": "Ranked #1 for 15 primary keywords, driving a 300% growth in leads."
     },
     "case3": {
       "title": "Automating Complex Workflows",
-      "problem": "Booking appointments manually was wasting 4 hours of medical staff time daily.",
-      "solution": "Built a custom automation system connecting the site with WhatsApp API and Google Calendar.",
+      "problem": "Booking appointments was wasting 4 hours of staff time daily.",
+      "solution": "Built a custom automation system connecting to WhatsApp API.",
       "impact": "Saved 20 hours per week and reduced appointment errors by 95%."
     }
   },
+  "pricing": {
+    "title": "Packages that fit your ambitions",
+    "subtitle": "Transparent pricing that builds trust and saves time",
+    "landing": {
+      "name": "Landing Page",
+      "price": "Starting at 400 SAR",
+      "desc": "Perfect for ad campaigns and validating ideas. Single page designed purely for conversions."
+    },
+    "corporate": {
+      "name": "Corporate Website",
+      "price": "Starting at 1,200 SAR",
+      "desc": "Comprehensive site reflecting your brand identity and optimized for Google ranking."
+    },
+    "ecommerce": {
+      "name": "E-Commerce & Apps",
+      "price": "Contact Us",
+      "desc": "High-performance stores and complex internal systems priced based on specific requirements."
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "How long does it take to build?",
+    "a1": "Depending on project scope, landing pages typically take 1-2 weeks, while corporate sites take 3-6 weeks.",
+    "q2": "Do you provide post-launch support?",
+    "a2": "Yes, all projects include a free warranty period for stability, with optional annual maintenance contracts.",
+    "q3": "Are your sites compatible with Saudi payment gateways?",
+    "a3": "Absolutely. We integrate seamlessly with local gateways like Mada, STC Pay, Tamara, and Tabby."
+  },
   "seo": {
-    "title": "CodeFlow | High-Converting Web Design & Development Agency",
-    "description": "Premium web agency specializing in high-performance websites, custom web applications, and conversion-focused landing pages for Saudi Arabia & GCC.",
+    "title": "CodeFlow | High-Converting Web Design & Development",
+    "description": "We build lightning-fast platforms to turn your visitors into paying clients in Saudi Arabia & the GCC.",
     "ogTitle": "CodeFlow - Your Revenue-Driving Web Partner",
-    "ogDescription": "Converting visitors into paying clients with high-speed websites, clean code, and premium UI/UX design."
+    "ogDescription": "Converting visitors into paying clients with high-speed websites and premium UI/UX design."
   },
   "privacy": {
     "title": "Privacy Policy",
-    "intro": "At CodeFlow, we value your privacy and are committed to protecting your personal data.",
+    "intro": "At CodeFlow, we value your privacy and protect your personal data.",
     "collection": {
       "title": "Information Collection",
-      "text": "We collect information you provide directly to us when contacting us via WhatsApp or booking a call."
+      "text": "We collect info you provide when contacting us."
     },
     "usage": {
       "title": "Information Usage",
-      "text": "We use the information to improve our services and communicate with you regarding your requests."
+      "text": "We use it to improve services and communicate with you."
     },
     "cookies": {
       "title": "Cookies",
-      "text": "We use cookies to enhance your user experience on our website."
+      "text": "We use cookies to enhance your experience."
     },
     "contact": {
       "title": "Contact Us",
-      "text": "If you have any questions about this Privacy Policy, please contact us via the number provided on the site."
+      "text": "Please contact us via the number provided."
     },
     "back_home": "Back to Home",
     "copyright": "All Rights Reserved © {year} CodeFlow"
   },
-  "cta_btn_try": "Try Now For Free",
-  "cta_btn_contact": "Contact Us",
-  "cta_btn_start": "Start Your Project Now",
-  "cta_btn_consult": "Get a Free Consultation",
+  "cta_btn_try": "Start Multiplying Your Sales",
+  "cta_btn_contact": "Get an Initial Consultation",
+  "cta_btn_start": "Request a Project Quote",
+  "cta_btn_consult": "Get a Free Website Audit",
   "contact_form": {
-    "title": "Book a Free 15-Min Strategy Call",
-    "subtitle": "Select a time or send us a message below. We reply in under 24 hours.",
-    "name": "Full Name",
-    "whatsapp": "Phone Number (with Country Code)",
-    "message": "Tell us about your project & business goals",
+    "title": "Book Your Free Consultation Now",
+    "subtitle": "Schedule a strategy call or send a message. We reply in under 24 hours.",
+    "name": "Full Name / Company",
+    "whatsapp": "Phone Number (for quick contact)",
+    "message": "Tell us about your estimated budget & goals",
     "submit": "Submit Request",
-    "success": "Your request has been received! We'll contact you within 24 hours to schedule your strategy call.",
+    "success": "Request received! We'll contact you soon.",
     "error": "Something went wrong, please try again."
   },
   "locations": {
-    "title": "Proudly Serving KSA & The Arab Market",
-    "description": "We build digital solutions optimized specifically for companies in Saudi Arabia and the GCC.",
+    "title": "Serving Companies in KSA & GCC",
+    "description": "Our software solutions are fully tailored to the business environment and user preferences in Saudi Arabia.",
     "egypt": "Egypt Office",
     "ksa": "Saudi Arabia Focus",
     "gcc": "GCC Compliance"
