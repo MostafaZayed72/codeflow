@@ -90,6 +90,7 @@ const closeMenu = () => {
         <!-- Burger Toggle -->
         <button 
           @click="toggleMenu"
+          aria-label="Toggle navigation menu"
           class="lg:hidden p-2.5 rounded-xl transition-all z-[70]"
           :class="[
             isScrolled || isMenuOpen || !isDarkHero
@@ -97,7 +98,7 @@ const closeMenu = () => {
               : 'text-white hover:bg-white/10 dark:text-slate-200 dark:hover:bg-slate-800'
           ]"
         >
-          <Menu class="w-7 h-7" />
+          <Menu class="w-7 h-7" aria-hidden="true" />
         </button>
       </div>
     </div>
@@ -125,9 +126,10 @@ const closeMenu = () => {
             <span class="text-xl font-black text-primary-600">CodeFlow</span>
             <button 
               @click="closeMenu"
+              aria-label="Close navigation menu"
               class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300"
             >
-              <X class="w-6 h-6" />
+              <X class="w-6 h-6" aria-hidden="true" />
             </button>
           </div>
 

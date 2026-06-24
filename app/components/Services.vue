@@ -72,8 +72,9 @@ const services = computed(() => [
           <div class="h-48 overflow-hidden relative">
             <img 
               :src="service.image" 
-              :alt="service.title"
-              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              :alt="t(`services.${service.key}.title`)" 
+              loading="lazy"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-slate-900 via-transparent to-transparent opacity-20"></div>
           </div>

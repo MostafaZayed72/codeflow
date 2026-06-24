@@ -84,7 +84,7 @@ onMounted(() => {
                 
                 <div class="flex items-center gap-3 md:gap-4 border-t border-slate-100 dark:border-slate-800 pt-5 md:pt-6">
                   <div class="w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden border-2 border-primary-500/20 shrink-0">
-                    <img :src="item.image" :alt="item.name" class="w-full h-full object-cover">
+                    <img :src="item.image" :alt="item.name" loading="lazy" class="w-full h-full object-cover">
                   </div>
                   <div>
                     <h4 class="font-bold text-lg md:text-xl text-slate-900 dark:text-white leading-tight">{{ item.name }}</h4>

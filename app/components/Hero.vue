@@ -12,6 +12,7 @@ const { t, locale } = useI18n()
         loop
         muted
         playsinline
+        preload="metadata"
         class="absolute inset-0 w-full h-full object-cover object-[center_top] md:object-center opacity-100 transition-opacity duration-1000"
       >
         <source src="https://res.cloudinary.com/de09liz3w/video/upload/q_auto/f_auto/v1780959446/hero_ldvdbb.webm" type="video/webm" />
@@ -24,7 +25,7 @@ const { t, locale } = useI18n()
     <div class="max-w-7xl mx-auto px-4 w-full text-center relative z-10 flex flex-col items-center">
       <!-- Badge -->
       <div class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-primary-200 text-sm font-semibold mb-8 shadow-lg shadow-black/10 animate-fade-in transition-colors duration-500">
-        <Zap class="w-4 h-4 fill-current text-primary-400" />
+        <Zap class="w-4 h-4 fill-current text-primary-400" aria-hidden="true" />
         <span class="tracking-wide uppercase text-xs">{{ t('hero.badge') }}</span>
       </div>
 
