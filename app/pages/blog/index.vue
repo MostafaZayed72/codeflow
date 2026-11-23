@@ -6,11 +6,23 @@ const { locale } = useI18n()
 const localePath = useLocalePath()
 
 const isAr = computed(() => locale.value === 'ar')
+const siteUrl = 'https://codeflowweb.com'
 
 useSeoMeta({
   title: () => (isAr.value ? 'المدونة والمقالات التقنية' : 'Blog & Technical Insights'),
   ogTitle: () => (isAr.value ? 'مدونة كود فلو | مقالات تطوير الويب والسيو وزيادة المبيعات' : 'CodeFlow Blog | Web Development, SEO & CRO Insights'),
   description: () =>
+    isAr.value
+      ? 'مقالات عملية حول تسريع المواقع، تحسين محركات البحث، وأتمتة الأعمال لزيادة مبيعاتك عبر الإنترنت.'
+      : 'Actionable articles on web performance, technical SEO, and business automation to grow your online revenue.',
+  ogDescription: () =>
+    isAr.value
+      ? 'مقالات عملية حول تسريع المواقع، تحسين محركات البحث، وأتمتة الأعمال لزيادة مبيعاتك عبر الإنترنت.'
+      : 'Actionable articles on web performance, technical SEO, and business automation to grow your online revenue.',
+  ogUrl: () => `${siteUrl}${localePath('/blog')}`,
+  twitterCard: 'summary_large_image',
+  twitterTitle: () => (isAr.value ? 'مدونة كود فلو | مقالات تطوير الويب والسيو' : 'CodeFlow Blog | Web Development & SEO Insights'),
+  twitterDescription: () =>
     isAr.value
       ? 'مقالات عملية حول تسريع المواقع، تحسين محركات البحث، وأتمتة الأعمال لزيادة مبيعاتك عبر الإنترنت.'
       : 'Actionable articles on web performance, technical SEO, and business automation to grow your online revenue.',
@@ -24,8 +36,6 @@ const localizedPosts = computed(() =>
     ...(isAr.value ? post.ar : post.en),
   }))
 )
-
-const siteUrl = 'https://codeflowweb.com'
 
 const blogSchema = computed(() => ({
   '@context': 'https://schema.org',
@@ -42,6 +52,7 @@ const blogSchema = computed(() => ({
     description: post.excerpt,
     image: post.image,
     datePublished: post.date,
+    keywords: post.keywords.join(', '),
     url: `${siteUrl}${localePath(`/blog/${post.slug}`)}`,
     author: {
       '@type': 'Organization',
@@ -50,18 +61,41 @@ const blogSchema = computed(() => ({
   }))
 }))
 
+const breadcrumbSchema = computed(() => ({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: isAr.value ? 'الرئيسية' : 'Home',
+      item: `${siteUrl}${localePath('/')}`
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: isAr.value ? 'المدونة' : 'Blog',
+      item: `${siteUrl}${localePath('/blog')}`
+    }
+  ]
+}))
+
 useHead({
   script: [
     {
       type: 'application/ld+json',
       innerHTML: () => JSON.stringify(blogSchema.value)
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: () => JSON.stringify(breadcrumbSchema.value)
     }
   ]
 })
 </script>
 
 <template>
-  <div :dir="isAr ? 'rtl' : 'ltr'" class="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 pt-32 pb-24">
+  <div :dir="isAr ? 'rtl' : 'ltr'" class="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans pt-32 pb-24">
     <div class="max-w-7xl mx-auto px-4">
       <!-- Header -->
       <div class="max-w-3xl mx-auto text-center mb-16 space-y-4">
@@ -88,14 +122,17 @@ useHead({
           :key="post.slug"
           class="group bg-white dark:bg-slate-900/60 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary-500/50 transition-all duration-300 hover:-translate-y-1.5 shadow-sm hover:shadow-2xl flex flex-col"
         >
-          <NuxtLink :to="localePath(`/blog/${post.slug}`)" class="block h-52 overflow-hidden relative">
+          <NuxtLink
+            :to="localePath(`/blog/${post.slug}`)"
+            class="block aspect-[16/10] bg-slate-100 dark:bg-slate-900/90 overflow-hidden relative flex items-center justify-center p-2"
+          >
             <img
               :src="post.image"
               :alt="post.title"
               loading="lazy"
-              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              class="w-full h-full object-contain rounded-2xl transition-transform duration-700 group-hover:scale-105"
             />
-            <span class="absolute top-4 start-4 px-3 py-1 rounded-full text-xs font-bold bg-white/90 dark:bg-slate-900/90 text-primary-600 dark:text-primary-400 backdrop-blur-sm shadow-sm">
+            <span class="absolute top-4 start-4 px-3 py-1 rounded-full text-xs font-bold bg-white/95 dark:bg-slate-900/95 text-primary-600 dark:text-primary-400 backdrop-blur-sm shadow-sm">
               {{ post.category }}
             </span>
           </NuxtLink>

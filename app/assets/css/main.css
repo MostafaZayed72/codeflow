@@ -14,14 +14,14 @@
 
   /* RTL specific adjustments if needed */
   [dir="rtl"] {
-    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-family: 'Tajawal', sans-serif;
   }
 }
 
 @layer components {
   .btn-primary {
     @apply inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold transition-all duration-300
-           bg-primary-600 text-white hover:bg-primary-700 hover:shadow-lg hover:-translate-y-0.5
+           bg-primary-600 text-white border border-gold/40 hover:bg-primary-700 hover:border-gold hover:shadow-lg hover:shadow-primary-950/25 hover:-translate-y-0.5
            active:translate-y-0 active:shadow-md;
   }
 

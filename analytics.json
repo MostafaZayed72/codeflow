@@ -1,12 +1,14 @@
 {
-  "pageViews": 82,
+  "pageViews": 90,
   "whatsappClicks": 2,
   "formSubmissions": 1,
   "pages": {
-    "/": 44,
+    "/": 48,
     "/en": 6,
     "/free-website-audit": 17,
-    "/audit-report": 15
+    "/audit-report": 15,
+    "/blog": 2,
+    "/blog/whatsapp-automation-for-service-businesses": 2
   },
   "clicks": {
     "cta_solutions_bottom": 3,

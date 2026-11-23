@@ -24,8 +24,8 @@ const { t, locale } = useI18n()
 
     <div class="max-w-7xl mx-auto px-4 w-full text-center relative z-10 flex flex-col items-center">
       <!-- Badge -->
-      <div class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-primary-200 text-sm font-semibold mb-8 shadow-lg shadow-black/10 animate-fade-in transition-colors duration-500">
-        <Zap class="w-4 h-4 fill-current text-primary-400" aria-hidden="true" />
+      <div class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-primary-900/60 backdrop-blur-md border border-gold/30 text-gold-light text-sm font-semibold mb-8 shadow-lg shadow-black/20 animate-fade-in transition-colors duration-500">
+        <Zap class="w-4 h-4 fill-current text-gold" aria-hidden="true" />
         <span class="tracking-wide uppercase text-xs">{{ t('hero.badge') }}</span>
       </div>
 
@@ -33,7 +33,7 @@ const { t, locale } = useI18n()
         <span class="block text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] mb-3 transition-colors duration-500">
           {{ t('hero.title') }}
         </span>
-        <span class="block bg-gradient-to-r from-primary-400 via-primary-300 to-gold bg-clip-text text-transparent drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)] transition-colors duration-500 pb-4">
+        <span class="block bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)] transition-colors duration-500 pb-4">
           {{ t('hero.subtitle') }}
         </span>
       </h1>

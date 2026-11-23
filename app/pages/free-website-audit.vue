@@ -207,24 +207,21 @@ useSeoMeta({
   description: 'اكتشف مشاكل موقعك خلال 30 ثانية. احصل على تقرير مجاني يوضح مشاكل السرعة وتجربة المستخدم وتحسين محركات البحث التي قد تؤثر على نتائج موقعك ومبيعاتك.',
   ogTitle: 'تقرير مجاني لتحليل موقعك | CodeFlow Web',
   ogDescription: 'اكتشف مشاكل موقعك خلال 30 ثانية. احصل على تقرير مجاني يوضح مشاكل السرعة وتجربة المستخدم وتحسين محركات البحث.',
-  ogImage: '/og-audit.png',
+  ogImage: 'https://codeflowweb.com/logo_v3.png',
   twitterCard: 'summary_large_image',
 })
 
 useHead({
-  link: [
-    { rel: 'canonical', href: 'https://codeflowweb.com/free-website-audit' }
-  ],
   script: [
     {
       type: 'application/ld+json',
-      children: JSON.stringify({
+      innerHTML: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Service",
         "serviceType": "Website Audit",
         "provider": {
           "@type": "Organization",
-          "name": "CodeFlow Web"
+          "name": "CodeFlow"
         },
         "description": "Free website performance, SEO, and UX audit report."
       })
