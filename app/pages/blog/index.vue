@@ -12,7 +12,7 @@ useSeoMeta({
   ogTitle: () => (isAr.value ? 'مدونة كود فلو | مقالات تطوير الويب والسيو وزيادة المبيعات' : 'CodeFlow Blog | Web Development, SEO & CRO Insights'),
   description: () =>
     isAr.value
-      ? 'مقالات عملية حول تسريع المواقع، تحسين محركات البحث، وأتمتة الأعمال لزيادة مبيعاتك في السوق السعودي والخليجي.'
+      ? 'مقالات عملية حول تسريع المواقع، تحسين محركات البحث، وأتمتة الأعمال لزيادة مبيعاتك عبر الإنترنت.'
       : 'Actionable articles on web performance, technical SEO, and business automation to grow your online revenue.',
 })
 
@@ -32,10 +32,10 @@ const blogSchema = computed(() => ({
   '@type': 'Blog',
   name: isAr.value ? 'مدونة كود فلو' : 'CodeFlow Blog',
   description: isAr.value
-    ? 'مقالات عملية حول تسريع المواقع، تحسين محركات البحث، وأتمتة الأعمال لزيادة مبيعاتك في السوق السعودي والخليجي.'
+    ? 'مقالات عملية حول تسريع المواقع، تحسين محركات البحث، وأتمتة الأعمال لزيادة مبيعاتك عبر الإنترنت.'
     : 'Actionable articles on web performance, technical SEO, and business automation to grow your online revenue.',
   url: `${siteUrl}${localePath('/blog')}`,
-  inLanguage: isAr.value ? 'ar-SA' : 'en-US',
+  inLanguage: isAr.value ? 'ar' : 'en',
   blogPost: localizedPosts.value.map((post) => ({
     '@type': 'BlogPosting',
     headline: post.title,

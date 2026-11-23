@@ -36,7 +36,7 @@ const plans = computed(() => [
     desc: t('pricing.ecommerce.desc'),
     features: [
       locale.value === 'ar' ? 'عربة تسوق متطورة' : 'Advanced shopping cart',
-      locale.value === 'ar' ? 'ربط مع بوابات الدفع (مدى، تابي..)' : 'Payment gateways (Mada, Tabby..)',
+      locale.value === 'ar' ? 'ربط مع بوابات الدفع العالمية والمحلية' : 'Global & local payment gateways',
       locale.value === 'ar' ? 'إدارة المخزون والطلبات' : 'Inventory & Order management',
       locale.value === 'ar' ? 'أنظمة حماية متقدمة' : 'Advanced security systems'
     ],

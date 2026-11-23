@@ -287,7 +287,7 @@ const steps = [
 const projects = [
   { title: "SN&P", category: "الأمن السيبراني", desc: "منصة احترافية للأمن السيبراني مصممة لزيادة الثقة وجذب صفقات الشركات الكبرى.", link: "https://secure-seven-omega.vercel.app/", image: "/projects/secure.png" },
   { title: "Square One", category: "التطوير العقاري", desc: "هوية رقمية متكاملة ومحرك بحث عقاري متطور لشركة تطوير عقاري رائدة.", link: "https://square-one-seven.vercel.app/", image: "/projects/squareone.png" },
-  { title: "دام (Dam)", category: "منصة مجتمعية", desc: "خارطة تفاعلية سريعة لاستكشاف الفعاليات والأنشطة في السعودية، مهيأة للزيارات الضخمة.", link: "https://damsa.cloud/", image: "/projects/damsa.png" }
+  { title: "دام (Dam)", category: "منصة مجتمعية", desc: "خارطة تفاعلية سريعة لاستكشاف الفعاليات والأنشطة، مهيأة للزيارات الضخمة.", link: "https://damsa.cloud/", image: "/projects/damsa.png" }
 ]
 
 const realTestimonials = [

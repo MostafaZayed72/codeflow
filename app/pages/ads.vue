@@ -39,7 +39,7 @@ definePageMeta({
           <div class="space-y-2">
             <p class="text-3xl sm:text-4xl md:text-5xl font-black text-primary-600 dark:text-primary-400">100%</p>
             <p class="text-sm md:text-base font-bold text-slate-600 dark:text-slate-300">
-              {{ locale === 'ar' ? 'توافق مع السوق الخليجي' : 'GCC Market Fit' }}
+              {{ locale === 'ar' ? 'معايير تجربة مستخدم عالمية' : 'Global UX Standards' }}
             </p>
           </div>
           <div class="space-y-2">

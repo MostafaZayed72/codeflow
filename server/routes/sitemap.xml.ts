@@ -14,7 +14,6 @@ export default defineEventHandler((event) => {
     { path: '/', changefreq: 'weekly', priority: '1.0' },
     { path: '/blog', changefreq: 'daily', priority: '0.9' },
     { path: '/free-website-audit', changefreq: 'monthly', priority: '0.8' },
-    { path: '/sa-gcc', changefreq: 'monthly', priority: '0.8' },
     { path: '/privacy', changefreq: 'yearly', priority: '0.3' },
   ]
 

@@ -39,7 +39,7 @@ const articleSchema = computed(() => ({
   image: [post.value!.image],
   datePublished: post.value!.date,
   dateModified: post.value!.date,
-  inLanguage: isAr.value ? 'ar-SA' : 'en-US',
+  inLanguage: isAr.value ? 'ar' : 'en',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': `${siteUrl}${localePath(`/blog/${post.value!.slug}`)}`

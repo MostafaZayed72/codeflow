@@ -64,7 +64,7 @@
     "view_project": "View Live Site",
     "project1": { "title": "SN&P", "category": "Cybersecurity", "desc": "Enterprise-grade threat protection platform designed for high security and buyer trust." },
     "project2": { "title": "Square One", "category": "Real Estate", "desc": "High-performance digital identity and property listing engine for a developer." },
-    "project3": { "title": "Dam", "category": "Community Platform", "desc": "Interactive geolocated map discovering local Saudi events, built for massive traffic." },
+    "project3": { "title": "Dam", "category": "Community Platform", "desc": "Interactive geolocated map discovering local events, built for massive traffic." },
     "project4": { "title": "Zabots", "category": "AI Automation", "desc": "Smart lead capturing system automating conversations into booked sales calls." },
     "project7": { "title": "Tqdr System", "category": "Fintech Platform", "desc": "Frictionless installment checkout flow and customer management dashboard." },
     "project9": { "title": "Happy Paws", "category": "E-Commerce", "desc": "Modern pet e-commerce platform optimized for high average order value." },
@@ -105,7 +105,7 @@
     },
     "case2": {
       "title": "Dominating Search Results",
-      "problem": "A real estate developer invisible on the first page of Google KSA.",
+      "problem": "A real estate developer invisible on the first page of Google.",
       "solution": "Conducted a complete technical SEO audit and restructured layout.",
       "impact": "Ranked #1 for 15 primary keywords, driving a 300% growth in leads."
     },
@@ -121,12 +121,12 @@
     "subtitle": "Transparent pricing that builds trust and saves time",
     "landing": {
       "name": "Landing Page",
-      "price": "Starting at 400 SAR",
+      "price": "Custom Quote",
       "desc": "Perfect for ad campaigns and validating ideas. Single page designed purely for conversions."
     },
     "corporate": {
       "name": "Corporate Website",
-      "price": "Starting at 1,200 SAR",
+      "price": "Custom Quote",
       "desc": "Comprehensive site reflecting your brand identity and optimized for Google ranking."
     },
     "ecommerce": {
@@ -141,12 +141,12 @@
     "a1": "Depending on project scope, landing pages typically take 1-2 weeks, while corporate sites take 3-6 weeks.",
     "q2": "Do you provide post-launch support?",
     "a2": "Yes, all projects include a free warranty period for stability, with optional annual maintenance contracts.",
-    "q3": "Are your sites compatible with Saudi payment gateways?",
-    "a3": "Absolutely. We integrate seamlessly with local gateways like Mada, STC Pay, Tamara, and Tabby."
+    "q3": "Are your sites compatible with online payment gateways?",
+    "a3": "Absolutely. We integrate seamlessly with leading global and local payment gateways supported in your country."
   },
   "seo": {
     "title": "CodeFlow | High-Converting Web Design & Development",
-    "description": "We build lightning-fast platforms to turn your visitors into paying clients in Saudi Arabia & the GCC.",
+    "description": "We build lightning-fast platforms to turn your visitors into paying clients worldwide.",
     "ogTitle": "CodeFlow - Your Revenue-Driving Web Partner",
     "ogDescription": "Converting visitors into paying clients with high-speed websites and premium UI/UX design."
   },
@@ -187,10 +187,10 @@
     "error": "Something went wrong, please try again."
   },
   "locations": {
-    "title": "Serving Companies in KSA & GCC",
-    "description": "Our software solutions are fully tailored to the business environment and user preferences in Saudi Arabia.",
-    "egypt": "Egypt Office",
-    "ksa": "Saudi Arabia Focus",
-    "gcc": "GCC Compliance"
+    "title": "Serving Businesses Worldwide",
+    "description": "Our software solutions are tailored to meet modern business requirements and user expectations across global markets.",
+    "egypt": "Global Engineering Standards",
+    "ksa": "Multi-Language & Currency",
+    "gcc": "Worldwide Market Ready"
   }
 }

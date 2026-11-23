@@ -19,8 +19,8 @@ export default defineNuxtConfig({
   i18n: {
     baseUrl: 'https://codeflowweb.com',
     locales: [
-      { code: 'ar', language: 'ar-SA', name: 'العربية', dir: 'rtl', file: 'ar.json' },
-      { code: 'en', language: 'en-US', name: 'English', dir: 'ltr', file: 'en.json' }
+      { code: 'ar', language: 'ar', name: 'العربية', dir: 'rtl', file: 'ar.json' },
+      { code: 'en', language: 'en', name: 'English', dir: 'ltr', file: 'en.json' }
     ],
     defaultLocale: 'ar',
     lazy: true,

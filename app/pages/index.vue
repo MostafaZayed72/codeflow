@@ -13,7 +13,7 @@ const servicesSchema = computed(() => ({
   image: 'https://codeflowweb.com/logo_v3.png',
   telephone: '+201099658770',
   description: t('seo.description'),
-  areaServed: ['SA', 'AE', 'KW', 'QA', 'BH', 'OM', 'EG'],
+  areaServed: 'Worldwide',
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: t('services.title'),

@@ -19,7 +19,7 @@ const organizationSchema = computed(() => ({
     '@type': 'ContactPoint',
     telephone: '+201099658770',
     contactType: 'sales',
-    areaServed: ['SA', 'AE', 'KW', 'QA', 'BH', 'OM', 'EG'],
+    areaServed: 'Worldwide',
     availableLanguage: ['Arabic', 'English']
   }
 }))
@@ -29,7 +29,7 @@ const websiteSchema = computed(() => ({
   '@type': 'WebSite',
   name: 'CodeFlow',
   url: siteUrl,
-  inLanguage: locale.value === 'ar' ? 'ar-SA' : 'en-US'
+  inLanguage: locale.value === 'ar' ? 'ar' : 'en'
 }))
 
 useHead({
