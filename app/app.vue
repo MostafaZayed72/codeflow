@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t, locale } = useI18n()
+const route = useRoute()
 const head = useLocaleHead({
   addDirAttribute: true,
   identifierAttribute: 'id',
@@ -71,7 +72,6 @@ useSeoMeta({
   twitterImage: 'https://codeflowweb.com/logo_v3.png',
 })
 
-const route = useRoute()
 let observer: IntersectionObserver | null = null
 let mutationObserver: MutationObserver | null = null
 
