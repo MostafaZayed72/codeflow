@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { MessageSquare, Menu, X, Phone } from 'lucide-vue-next'
 const { t, locale } = useI18n()
+const localePath = useLocalePath()
 const route = useRoute()
 const isDarkHero = computed(() => route.path === '/' || route.path === '/en')
 
@@ -13,14 +14,15 @@ if (import.meta.client) {
   })
 }
 
-const navLinks = [
-  { href: '/#services', label: 'nav.services' },
-  { href: '/#solutions', label: 'nav.solutions' },
-  { href: '/#work', label: 'nav.work' },
-  { href: '/#pricing', label: 'nav.pricing' },
-  { href: '/free-website-audit', label: 'nav.free_audit' },
-  { href: '/#contact', label: 'nav.contact' },
-]
+const navLinks = computed(() => [
+  { href: `${localePath('/')}#services`, label: 'nav.services' },
+  { href: `${localePath('/')}#solutions`, label: 'nav.solutions' },
+  { href: `${localePath('/')}#work`, label: 'nav.work' },
+  { href: `${localePath('/')}#pricing`, label: 'nav.pricing' },
+  { href: localePath('/blog'), label: 'nav.blog' },
+  { href: localePath('/free-website-audit'), label: 'nav.free_audit' },
+  { href: `${localePath('/')}#contact`, label: 'nav.contact' },
+])
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
@@ -55,10 +57,10 @@ const closeMenu = () => {
 
       <!-- Desktop Links -->
       <div class="hidden lg:flex items-center gap-8">
-        <a 
+        <NuxtLink 
           v-for="link in navLinks" 
           :key="link.href"
-          :href="link.href" 
+          :to="link.href" 
           class="text-base font-bold transition-colors"
           :class="[
             isScrolled || isMenuOpen || !isDarkHero
@@ -67,7 +69,7 @@ const closeMenu = () => {
           ]"
         >
           {{ t(link.label) }}
-        </a>
+        </NuxtLink>
       </div>
 
       <!-- Actions -->
@@ -134,15 +136,15 @@ const closeMenu = () => {
           </div>
 
           <div class="p-8 flex flex-col gap-6">
-            <a 
+            <NuxtLink 
               v-for="link in navLinks" 
               :key="link.href"
-              :href="link.href" 
+              :to="link.href" 
               class="text-xl sm:text-3xl font-extrabold text-slate-900 dark:text-white hover:text-primary-600 transition-all active:scale-95 whitespace-nowrap"
               @click="closeMenu"
             >
               {{ t(link.label) }}
-            </a>
+            </NuxtLink>
             
             <div class="h-px bg-slate-100 dark:bg-slate-800 my-4"></div>
             

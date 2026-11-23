@@ -6,10 +6,50 @@ const head = useLocaleHead({
   addSeoAttributes: true
 })
 
+const siteUrl = 'https://codeflowweb.com'
+
+const organizationSchema = computed(() => ({
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'CodeFlow',
+  url: siteUrl,
+  logo: `${siteUrl}/logo_v3.png`,
+  description: t('seo.description'),
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+201099658770',
+    contactType: 'sales',
+    areaServed: ['SA', 'AE', 'KW', 'QA', 'BH', 'OM', 'EG'],
+    availableLanguage: ['Arabic', 'English']
+  }
+}))
+
+const websiteSchema = computed(() => ({
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'CodeFlow',
+  url: siteUrl,
+  inLanguage: locale.value === 'ar' ? 'ar-SA' : 'en-US'
+}))
+
 useHead({
   titleTemplate: (title) => title ? `${title} | CodeFlow` : t('seo.title'),
-  link: [
-    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+  link: () => [
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    ...(head.value.link || [])
+  ],
+  meta: () => [
+    ...(head.value.meta || [])
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: () => JSON.stringify(organizationSchema.value)
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: () => JSON.stringify(websiteSchema.value)
+    }
   ]
 })
 
@@ -18,15 +58,15 @@ useSeoMeta({
   ogTitle: () => t('seo.ogTitle'),
   description: () => t('seo.description'),
   ogDescription: () => t('seo.ogDescription'),
-  ogImage: 'https://codeflowweb.vercel.app/logo_v3.png',
+  ogImage: 'https://codeflowweb.com/logo_v3.png',
   ogImageWidth: 1200,
   ogImageHeight: 630,
   ogType: 'website',
-  ogUrl: 'https://codeflowweb.vercel.app/',
+  ogUrl: 'https://codeflowweb.com/',
   twitterCard: 'summary_large_image',
   twitterTitle: () => t('seo.ogTitle'),
   twitterDescription: () => t('seo.ogDescription'),
-  twitterImage: 'https://codeflowweb.vercel.app/logo_v3.png',
+  twitterImage: 'https://codeflowweb.com/logo_v3.png',
 })
 
 const route = useRoute()

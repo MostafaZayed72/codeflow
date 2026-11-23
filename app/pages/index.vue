@@ -2,6 +2,45 @@
 import { Phone, MessageSquare, ArrowRight } from 'lucide-vue-next'
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
+
+const serviceKeys = ['design', 'development', 'redesign', 'wordpress', 'framer', 'custom'] as const
+
+const servicesSchema = computed(() => ({
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'CodeFlow',
+  url: 'https://codeflowweb.com',
+  image: 'https://codeflowweb.com/logo_v3.png',
+  telephone: '+201099658770',
+  description: t('seo.description'),
+  areaServed: ['SA', 'AE', 'KW', 'QA', 'BH', 'OM', 'EG'],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: t('services.title'),
+    itemListElement: serviceKeys.map((key, index) => ({
+      '@type': 'Offer',
+      position: index + 1,
+      itemOffered: {
+        '@type': 'Service',
+        name: t(`services.${key}.title`),
+        description: t(`services.${key}.desc`),
+        provider: {
+          '@type': 'Organization',
+          name: 'CodeFlow'
+        }
+      }
+    }))
+  }
+}))
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: () => JSON.stringify(servicesSchema.value)
+    }
+  ]
+})
 </script>
 
 <template>

@@ -1,10 +1,10 @@
 {
-  "pageViews": 74,
+  "pageViews": 77,
   "whatsappClicks": 2,
   "formSubmissions": 1,
   "pages": {
-    "/": 39,
-    "/en": 3,
+    "/": 41,
+    "/en": 4,
     "/free-website-audit": 17,
     "/audit-report": 15
   },
@@ -13,7 +13,7 @@
     "cta_testimonials_bottom": 1,
     "index_final_whatsapp": 1,
     "hero_strategy_call": 1,
-    "hero_free_audit": 1,
+    "hero_free_audit": 2,
     "report_whatsapp_cta": 1
   }
 }

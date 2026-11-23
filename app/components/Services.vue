@@ -72,7 +72,7 @@ const services = computed(() => [
           <div class="h-48 overflow-hidden relative">
             <img 
               :src="service.image" 
-              :alt="t(`services.${service.key}.title`)" 
+              :alt="service.title" 
               loading="lazy"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />

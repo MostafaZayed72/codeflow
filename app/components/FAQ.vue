@@ -8,6 +8,28 @@ const faqs = computed(() => [
   { q: t('faq.q3'), a: t('faq.a3'), open: false }
 ])
 
+const faqSchema = computed(() => ({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.value.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.a
+    }
+  }))
+}))
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: () => JSON.stringify(faqSchema.value)
+    }
+  ]
+})
+
 const toggle = (index: number) => {
   faqs.value[index].open = !faqs.value[index].open
 }
